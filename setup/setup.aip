@@ -1,0 +1,777 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT Type="Advanced Installer" CreateVersion="8.6" version="8.9" Modules="professional" RootPath="." Language="en_GB" Id="{E9FC104D-801B-4E54-9AE0-37CD4AC48231}">
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
+    <ROW Property="AI_FINDEXE_TITLE" Value="Select the installation package for [|ProductName]" ValueLocId="AI.Property.FindExeTitle"/>
+    <ROW Property="AI_MINDOTNETVERSION" MultiBuildValue="DefaultBuild:4.0" ValueLocId="-"/>
+    <ROW Property="ALLUSERS" Value="2"/>
+    <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
+    <ROW Property="ARPPRODUCTICON" Value="settv.exe" Type="8"/>
+    <ROW Property="CTRLS" Value="2"/>
+    <ROW Property="Manufacturer" Value="Satellite Live" ValueLocId="*"/>
+    <ROW Property="ProductCode" Value="2057:{3ADB7B15-1981-47B2-8506-B752620695A6} " Type="16"/>
+    <ROW Property="ProductLanguage" Value="2057"/>
+    <ROW Property="ProductName" Value="SatelliteLive" ValueLocId="*"/>
+    <ROW Property="ProductVersion" Value="1.2.11"/>
+    <ROW Property="RUNAPPLICATION" Value="1" Type="4"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND;AI_SETUPEXEPATH;SETUPEXEDIR"/>
+    <ROW Property="UpgradeCode" Value="{186F5454-00DD-4CC4-ABEB-C14AACD32A68}"/>
+    <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsType9XDisplay" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
+    <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
+    <ROW Directory="DesktopFolder" Directory_Parent="TARGETDIR" DefaultDir="Deskto~1|DesktopFolder" IsPseudoRoot="1"/>
+    <ROW Directory="SHORTCUTDIR" Directory_Parent="TARGETDIR" DefaultDir="SHORTC~1|SHORTCUTDIR" IsPseudoRoot="1"/>
+    <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
+    <ROW Directory="plugins_Dir" Directory_Parent="vlc_Dir" DefaultDir="plugins"/>
+    <ROW Directory="vlc_Dir" Directory_Parent="APPDIR" DefaultDir="vlc"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
+    <ROW Component="AF6A8838_0269_46AF_B128_A460BD2C6136" ComponentId="{E4EEB125-2605-4A11-8389-E9F5CAD181C4}" Directory_="APPDIR" Attributes="4" KeyPath="AF6A8838_0269_46AF_B128_A460BD2C6136" Options="2"/>
+    <ROW Component="AI_ExePath" ComponentId="{F7F54290-4C29-40EB-9B67-958DEA67B817}" Directory_="APPDIR" Attributes="4" KeyPath="AI_ExePath"/>
+    <ROW Component="AxInterop.AXVLC.dll" ComponentId="{D994A005-3BD5-4D94-9E16-241D5521D98D}" Directory_="APPDIR" Attributes="0" KeyPath="AxInterop.AXVLC.dll"/>
+    <ROW Component="AxInterop.ShockwaveFlashObjects.dll" ComponentId="{5EF795C0-D366-484A-8D20-2A122D400983}" Directory_="APPDIR" Attributes="0" KeyPath="AxInterop.ShockwaveFlashObjects.dll"/>
+    <ROW Component="AxInterop.WMPLib.dll" ComponentId="{F3883687-86BC-407E-9385-481BAE2212C0}" Directory_="APPDIR" Attributes="0" KeyPath="AxInterop.WMPLib.dll"/>
+    <ROW Component="CrawlerLib.Net.dll" ComponentId="{6F0D64B4-97F9-4BC9-8154-2E89A6EEB257}" Directory_="APPDIR" Attributes="0" KeyPath="CrawlerLib.Net.dll"/>
+    <ROW Component="HtmlAgilityPack.dll" ComponentId="{0DDAFCD1-6A69-4BB3-A911-92CDEA22419C}" Directory_="APPDIR" Attributes="0" KeyPath="HtmlAgilityPack.dll"/>
+    <ROW Component="Interop.AXVLC.dll" ComponentId="{4F916D89-7CCA-4F46-9857-0F006D7CF1C0}" Directory_="APPDIR" Attributes="0" KeyPath="Interop.AXVLC.dll"/>
+    <ROW Component="Interop.ShockwaveFlashObjects.dll" ComponentId="{5F09B28E-3C46-465B-83BB-FAC9D489DDA7}" Directory_="APPDIR" Attributes="0" KeyPath="Interop.ShockwaveFlashObjects.dll"/>
+    <ROW Component="Interop.WMPLib.dll" ComponentId="{7EFEF67F-E156-403C-B52E-D51596F4077F}" Directory_="APPDIR" Attributes="0" KeyPath="Interop.WMPLib.dll"/>
+    <ROW Component="ProductInformation" ComponentId="{B3BC6218-F418-4A89-AABE-C176E3FEA02E}" Directory_="APPDIR" Attributes="4" KeyPath="ProductName_"/>
+    <ROW Component="SHORTCUTDIR" ComponentId="{298935DF-7F97-4378-9F5A-03E1AC36839D}" Directory_="SHORTCUTDIR" Attributes="0"/>
+    <ROW Component="STVControls.dll" ComponentId="{092F04A4-5CF6-44F9-8AC1-399D171A0D01}" Directory_="APPDIR" Attributes="0" KeyPath="STVControls.dll"/>
+    <ROW Component="axvlc.dll" ComponentId="{082DA39C-0541-4933-9A6C-74CDA8418836}" Directory_="vlc_Dir" Attributes="0" KeyPath="axvlc.dll"/>
+    <ROW Component="liba52_plugin.dll" ComponentId="{1C2BD894-B50A-4CE7-B56E-78A8C60AB8B8}" Directory_="plugins_Dir" Attributes="0" KeyPath="liba52_plugin.dll"/>
+    <ROW Component="liba52tofloat32_plugin.dll" ComponentId="{EA8A79B0-27E5-4667-B717-DE887921DC8C}" Directory_="plugins_Dir" Attributes="0" KeyPath="liba52tofloat32_plugin.dll"/>
+    <ROW Component="liba52tospdif_plugin.dll" ComponentId="{21D2C5A4-CC8A-486A-A30A-5F4CCF530A51}" Directory_="plugins_Dir" Attributes="0" KeyPath="liba52tospdif_plugin.dll"/>
+    <ROW Component="libaccess_attachment_plugin.dll" ComponentId="{6F548DDA-472C-49BA-9355-E5E58F8D19B5}" Directory_="plugins_Dir" Attributes="0" KeyPath="libaccess_attachment_plugin.dll"/>
+    <ROW Component="libaccess_bd_plugin.dll" ComponentId="{424169EC-1440-4F12-997F-567FEEE4B913}" Directory_="plugins_Dir" Attributes="0" KeyPath="libaccess_bd_plugin.dll"/>
+    <ROW Component="libaccess_fake_plugin.dll" ComponentId="{DFA0489D-535F-4311-BF8B-D0EFD07CB637}" Directory_="plugins_Dir" Attributes="0" KeyPath="libaccess_fake_plugin.dll"/>
+    <ROW Component="libaccess_ftp_plugin.dll" ComponentId="{AEE01271-499B-4246-BD64-262A74175EBE}" Directory_="plugins_Dir" Attributes="0" KeyPath="libaccess_ftp_plugin.dll"/>
+    <ROW Component="libaccess_http_plugin.dll" ComponentId="{98CED908-5C81-4423-AAC5-57CCA1B5259A}" Directory_="plugins_Dir" Attributes="0" KeyPath="libaccess_http_plugin.dll"/>
+    <ROW Component="libaccess_imem_plugin.dll" ComponentId="{E1B8C95C-514B-4C5E-888C-FB1DCF45F7B5}" Directory_="plugins_Dir" Attributes="0" KeyPath="libaccess_imem_plugin.dll"/>
+    <ROW Component="libaccess_mms_plugin.dll" ComponentId="{F7F7C9CA-129B-40BC-8BA5-F263168375BE}" Directory_="plugins_Dir" Attributes="0" KeyPath="libaccess_mms_plugin.dll"/>
+    <ROW Component="libaccess_output_dummy_plugin.dll" ComponentId="{13EE82E7-7A9C-4CEF-BA5A-B103B862AE62}" Directory_="plugins_Dir" Attributes="0" KeyPath="libaccess_output_dummy_plugin.dll"/>
+    <ROW Component="libaccess_output_file_plugin.dll" ComponentId="{8A003CD2-23C5-43D5-821C-C3CA0CFB60DD}" Directory_="plugins_Dir" Attributes="0" KeyPath="libaccess_output_file_plugin.dll"/>
+    <ROW Component="libaccess_output_http_plugin.dll" ComponentId="{B6B5B2DE-5A14-49A3-B760-B311C641A419}" Directory_="plugins_Dir" Attributes="0" KeyPath="libaccess_output_http_plugin.dll"/>
+    <ROW Component="libaccess_output_shout_plugin.dll" ComponentId="{9EF7E1FD-1FE1-495B-B643-DD6123CBD22C}" Directory_="plugins_Dir" Attributes="0" KeyPath="libaccess_output_shout_plugin.dll"/>
+    <ROW Component="libaccess_output_udp_plugin.dll" ComponentId="{70D2113A-7ECB-4D46-BC85-42DC73371D3C}" Directory_="plugins_Dir" Attributes="0" KeyPath="libaccess_output_udp_plugin.dll"/>
+    <ROW Component="libaccess_realrtsp_plugin.dll" ComponentId="{777CBAA2-9B8B-49DD-8F65-CB28A36EAED9}" Directory_="plugins_Dir" Attributes="0" KeyPath="libaccess_realrtsp_plugin.dll"/>
+    <ROW Component="libaccess_smb_plugin.dll" ComponentId="{68A694E8-FC62-47E7-8D88-555B866765BE}" Directory_="plugins_Dir" Attributes="0" KeyPath="libaccess_smb_plugin.dll"/>
+    <ROW Component="libaccess_tcp_plugin.dll" ComponentId="{F73D5B44-F11B-46B8-ADAF-80DA811D25D9}" Directory_="plugins_Dir" Attributes="0" KeyPath="libaccess_tcp_plugin.dll"/>
+    <ROW Component="libaccess_udp_plugin.dll" ComponentId="{3D203447-5033-416E-B09C-D991BBE619CC}" Directory_="plugins_Dir" Attributes="0" KeyPath="libaccess_udp_plugin.dll"/>
+    <ROW Component="libadjust_plugin.dll" ComponentId="{8F3A1CE1-A426-4C71-85AA-57E09A44DCB7}" Directory_="plugins_Dir" Attributes="0" KeyPath="libadjust_plugin.dll"/>
+    <ROW Component="libadpcm_plugin.dll" ComponentId="{5F764651-E4B5-47CF-9B58-9CBBCA70287E}" Directory_="plugins_Dir" Attributes="0" KeyPath="libadpcm_plugin.dll"/>
+    <ROW Component="libaes3_plugin.dll" ComponentId="{DDF334EB-506F-43DC-BAF1-E182ADD4C290}" Directory_="plugins_Dir" Attributes="0" KeyPath="libaes3_plugin.dll"/>
+    <ROW Component="libaiff_plugin.dll" ComponentId="{77DAD870-76E2-4479-B6C1-AF1FC8862F77}" Directory_="plugins_Dir" Attributes="0" KeyPath="libaiff_plugin.dll"/>
+    <ROW Component="libalphamask_plugin.dll" ComponentId="{8836B54B-E71F-47C5-AE32-826F66CB5D9C}" Directory_="plugins_Dir" Attributes="0" KeyPath="libalphamask_plugin.dll"/>
+    <ROW Component="libaout_directx_plugin.dll" ComponentId="{13D3F027-78B0-432E-8CCF-57790F08117C}" Directory_="plugins_Dir" Attributes="0" KeyPath="libaout_directx_plugin.dll"/>
+    <ROW Component="libaout_file_plugin.dll" ComponentId="{1298AF35-951C-4230-A4F2-95B0DCB01A07}" Directory_="plugins_Dir" Attributes="0" KeyPath="libaout_file_plugin.dll"/>
+    <ROW Component="libaout_sdl_plugin.dll" ComponentId="{7A9E5783-784E-424D-AC82-65759A596E8A}" Directory_="plugins_Dir" Attributes="0" KeyPath="libaout_sdl_plugin.dll"/>
+    <ROW Component="libaraw_plugin.dll" ComponentId="{15FB7C69-CD82-4ABC-957A-5A78AE8D1C30}" Directory_="plugins_Dir" Attributes="0" KeyPath="libaraw_plugin.dll"/>
+    <ROW Component="libasf_plugin.dll" ComponentId="{693528B3-CF0E-4A95-8AB8-5AC8EDEBD2BE}" Directory_="plugins_Dir" Attributes="0" KeyPath="libasf_plugin.dll"/>
+    <ROW Component="libatmo_plugin.dll" ComponentId="{4BE6480E-7FBC-4AFA-8421-028F9B720294}" Directory_="plugins_Dir" Attributes="0" KeyPath="libatmo_plugin.dll"/>
+    <ROW Component="libau_plugin.dll" ComponentId="{5C1A21A9-8F37-42DA-9CCF-F0A28033D595}" Directory_="plugins_Dir" Attributes="0" KeyPath="libau_plugin.dll"/>
+    <ROW Component="libaudio_format_plugin.dll" ComponentId="{8488E22B-FEE0-4D27-97D1-C3EB4839C0B6}" Directory_="plugins_Dir" Attributes="0" KeyPath="libaudio_format_plugin.dll"/>
+    <ROW Component="libaudiobargraph_a_plugin.dll" ComponentId="{18733A64-569B-405E-8D93-7B926B52738D}" Directory_="plugins_Dir" Attributes="0" KeyPath="libaudiobargraph_a_plugin.dll"/>
+    <ROW Component="libaudiobargraph_v_plugin.dll" ComponentId="{1F46008D-6568-40B6-862E-C0EC4C995160}" Directory_="plugins_Dir" Attributes="0" KeyPath="libaudiobargraph_v_plugin.dll"/>
+    <ROW Component="libaudioscrobbler_plugin.dll" ComponentId="{F036A0AA-AEA0-45B2-800E-8ADC49EAEE1E}" Directory_="plugins_Dir" Attributes="0" KeyPath="libaudioscrobbler_plugin.dll"/>
+    <ROW Component="libavcodec_plugin.dll" ComponentId="{B89858C6-0F5B-4D40-B366-D867FEA9D04E}" Directory_="plugins_Dir" Attributes="0" KeyPath="libavcodec_plugin.dll"/>
+    <ROW Component="libavi_plugin.dll" ComponentId="{FB94F3A3-AC1E-421A-AE82-EB85DA16E01B}" Directory_="plugins_Dir" Attributes="0" KeyPath="libavi_plugin.dll"/>
+    <ROW Component="libball_plugin.dll" ComponentId="{93FF39B6-3B2F-4E6E-BBDD-0D1B6F41721A}" Directory_="plugins_Dir" Attributes="0" KeyPath="libball_plugin.dll"/>
+    <ROW Component="libbda_plugin.dll" ComponentId="{6D045B23-11CA-46B8-9D56-D34F892376ED}" Directory_="plugins_Dir" Attributes="0" KeyPath="libbda_plugin.dll"/>
+    <ROW Component="libblend_plugin.dll" ComponentId="{CE6945BE-27E1-4FED-9072-4FFA8075E6F0}" Directory_="plugins_Dir" Attributes="0" KeyPath="libblend_plugin.dll"/>
+    <ROW Component="libblendbench_plugin.dll" ComponentId="{A26325FD-11B2-4840-BA11-1797F8814909}" Directory_="plugins_Dir" Attributes="0" KeyPath="libblendbench_plugin.dll"/>
+    <ROW Component="libbluescreen_plugin.dll" ComponentId="{A2766C1A-BF7C-49DE-8C3E-993CF4E4332F}" Directory_="plugins_Dir" Attributes="0" KeyPath="libbluescreen_plugin.dll"/>
+    <ROW Component="libcaca_plugin.dll" ComponentId="{62148B0B-8D28-44B9-A7EE-345635B1FF0B}" Directory_="plugins_Dir" Attributes="0" KeyPath="libcaca_plugin.dll"/>
+    <ROW Component="libcanvas_plugin.dll" ComponentId="{D73283A3-A9EB-4B93-89A4-D3EBEAA3E01E}" Directory_="plugins_Dir" Attributes="0" KeyPath="libcanvas_plugin.dll"/>
+    <ROW Component="libcc_plugin.dll" ComponentId="{92DA1C55-90A3-49A7-9D3A-CAAE6E5566CF}" Directory_="plugins_Dir" Attributes="0" KeyPath="libcc_plugin.dll"/>
+    <ROW Component="libcdda_plugin.dll" ComponentId="{3A7A6664-EA30-4D21-AC4A-1E7C17974EBC}" Directory_="plugins_Dir" Attributes="0" KeyPath="libcdda_plugin.dll"/>
+    <ROW Component="libcdg_plugin.dll" ComponentId="{FCC959A3-3AF3-4B49-8920-582350DB637E}" Directory_="plugins_Dir" Attributes="0" KeyPath="libcdg_plugin.dll"/>
+    <ROW Component="libchain_plugin.dll" ComponentId="{3183A4BE-D969-4665-8357-9157919330CD}" Directory_="plugins_Dir" Attributes="0" KeyPath="libchain_plugin.dll"/>
+    <ROW Component="libchorus_flanger_plugin.dll" ComponentId="{F84D9A2E-BA98-4FB7-BE68-75B51E895587}" Directory_="plugins_Dir" Attributes="0" KeyPath="libchorus_flanger_plugin.dll"/>
+    <ROW Component="libclone_plugin.dll" ComponentId="{4053F347-CE81-4360-9D3A-0C57687AE7D9}" Directory_="plugins_Dir" Attributes="0" KeyPath="libclone_plugin.dll"/>
+    <ROW Component="libcolorthres_plugin.dll" ComponentId="{7298F814-82A7-4569-9697-7498E05419E5}" Directory_="plugins_Dir" Attributes="0" KeyPath="libcolorthres_plugin.dll"/>
+    <ROW Component="libconverter_fixed_plugin.dll" ComponentId="{A695F29D-BC8C-443A-B44A-21887FD5FB2D}" Directory_="plugins_Dir" Attributes="0" KeyPath="libconverter_fixed_plugin.dll"/>
+    <ROW Component="libcrop_plugin.dll" ComponentId="{214A1B78-86F1-4037-8E23-7828CAA1EA61}" Directory_="plugins_Dir" Attributes="0" KeyPath="libcrop_plugin.dll"/>
+    <ROW Component="libcroppadd_plugin.dll" ComponentId="{BF695B2E-95B2-4A8A-8884-6108055DC85A}" Directory_="plugins_Dir" Attributes="0" KeyPath="libcroppadd_plugin.dll"/>
+    <ROW Component="libcvdsub_plugin.dll" ComponentId="{AFAE6CA7-074A-46E6-9643-51090C86C315}" Directory_="plugins_Dir" Attributes="0" KeyPath="libcvdsub_plugin.dll"/>
+    <ROW Component="libdeinterlace_plugin.dll" ComponentId="{B3242240-58DB-41D8-86EE-D1CC8160BB24}" Directory_="plugins_Dir" Attributes="0" KeyPath="libdeinterlace_plugin.dll"/>
+    <ROW Component="libdemux_cdg_plugin.dll" ComponentId="{7BABEDD3-3258-4620-909D-EB27F5BA8E9D}" Directory_="plugins_Dir" Attributes="0" KeyPath="libdemux_cdg_plugin.dll"/>
+    <ROW Component="libdemuxdump_plugin.dll" ComponentId="{F2E10B2A-B665-4E23-ABB5-437F28CFE32A}" Directory_="plugins_Dir" Attributes="0" KeyPath="libdemuxdump_plugin.dll"/>
+    <ROW Component="libdirac_plugin.dll" ComponentId="{1E2E7BC7-14EA-4532-832B-73F43EAF0BDF}" Directory_="plugins_Dir" Attributes="0" KeyPath="libdirac_plugin.dll"/>
+    <ROW Component="libdirect3d_plugin.dll" ComponentId="{52C5D650-DB27-4FF0-9B46-F5E2357B956C}" Directory_="plugins_Dir" Attributes="0" KeyPath="libdirect3d_plugin.dll"/>
+    <ROW Component="libdirectx_plugin.dll" ComponentId="{A3169514-520F-49E6-BB09-807EDEA0FE80}" Directory_="plugins_Dir" Attributes="0" KeyPath="libdirectx_plugin.dll"/>
+    <ROW Component="libdmo_plugin.dll" ComponentId="{78B17602-72FD-4A42-9A7C-658BBBA08C84}" Directory_="plugins_Dir" Attributes="0" KeyPath="libdmo_plugin.dll"/>
+    <ROW Component="libdolby_surround_decoder_plugin.dll" ComponentId="{FC94E8EF-F8D2-4DDA-8E19-CF0E8DC70526}" Directory_="plugins_Dir" Attributes="0" KeyPath="libdolby_surround_decoder_plugin.dll"/>
+    <ROW Component="libdrawable_plugin.dll" ComponentId="{BE750010-A102-4A0A-BD73-22EBD336E55E}" Directory_="plugins_Dir" Attributes="0" KeyPath="libdrawable_plugin.dll"/>
+    <ROW Component="libdshow_plugin.dll" ComponentId="{EE950371-F8B1-437D-83D5-4F0708E1A75C}" Directory_="plugins_Dir" Attributes="0" KeyPath="libdshow_plugin.dll"/>
+    <ROW Component="libdts_plugin.dll" ComponentId="{6DF05980-9EBD-41AC-BE3E-B226CD369BA0}" Directory_="plugins_Dir" Attributes="0" KeyPath="libdts_plugin.dll"/>
+    <ROW Component="libdtstofloat32_plugin.dll" ComponentId="{CAD38701-6010-46BB-B09D-99BB0DBA6334}" Directory_="plugins_Dir" Attributes="0" KeyPath="libdtstofloat32_plugin.dll"/>
+    <ROW Component="libdtstospdif_plugin.dll" ComponentId="{3F9B721F-D885-4823-BBAF-143F1D208391}" Directory_="plugins_Dir" Attributes="0" KeyPath="libdtstospdif_plugin.dll"/>
+    <ROW Component="libdummy_plugin.dll" ComponentId="{79A1A7CC-636D-46FC-A95A-C5A063F16A69}" Directory_="plugins_Dir" Attributes="0" KeyPath="libdummy_plugin.dll"/>
+    <ROW Component="libdvbsub_plugin.dll" ComponentId="{3901FF4B-8964-437B-A16B-06A8912071C5}" Directory_="plugins_Dir" Attributes="0" KeyPath="libdvbsub_plugin.dll"/>
+    <ROW Component="libdvdnav_plugin.dll" ComponentId="{532E8F76-D819-49F5-BE16-C5022BD9DF1C}" Directory_="plugins_Dir" Attributes="0" KeyPath="libdvdnav_plugin.dll"/>
+    <ROW Component="libdvdread_plugin.dll" ComponentId="{9109C9B3-09E9-468C-9A89-105D20A3DF3C}" Directory_="plugins_Dir" Attributes="0" KeyPath="libdvdread_plugin.dll"/>
+    <ROW Component="libequalizer_plugin.dll" ComponentId="{26B4A2AD-9698-4A33-953A-8D1CEF0CD0BD}" Directory_="plugins_Dir" Attributes="0" KeyPath="libequalizer_plugin.dll"/>
+    <ROW Component="liberase_plugin.dll" ComponentId="{B2EE27A1-F97F-4B9D-9EF7-B0D23EF41D40}" Directory_="plugins_Dir" Attributes="0" KeyPath="liberase_plugin.dll"/>
+    <ROW Component="libes_plugin.dll" ComponentId="{2454D263-BEAC-4C90-BED8-56528F9222DE}" Directory_="plugins_Dir" Attributes="0" KeyPath="libes_plugin.dll"/>
+    <ROW Component="libexport_plugin.dll" ComponentId="{49D2CF15-1ECC-42EB-9A8A-CA2297DA1CB7}" Directory_="plugins_Dir" Attributes="0" KeyPath="libexport_plugin.dll"/>
+    <ROW Component="libextract_plugin.dll" ComponentId="{B1B3E6A2-4E18-40B1-A85D-F095514D701D}" Directory_="plugins_Dir" Attributes="0" KeyPath="libextract_plugin.dll"/>
+    <ROW Component="libfaad_plugin.dll" ComponentId="{D776B70F-6678-4415-99C9-74760682DCE2}" Directory_="plugins_Dir" Attributes="0" KeyPath="libfaad_plugin.dll"/>
+    <ROW Component="libfake_plugin.dll" ComponentId="{4988D545-9104-4AE5-82D0-5CCB6C5427D6}" Directory_="plugins_Dir" Attributes="0" KeyPath="libfake_plugin.dll"/>
+    <ROW Component="libfilesystem_plugin.dll" ComponentId="{C96EAE31-237E-45B4-8C15-E6B18020A195}" Directory_="plugins_Dir" Attributes="0" KeyPath="libfilesystem_plugin.dll"/>
+    <ROW Component="libflac_plugin.dll" ComponentId="{BB3B4363-21FF-4D48-A6B6-B166F957FC56}" Directory_="plugins_Dir" Attributes="0" KeyPath="libflac_plugin.dll"/>
+    <ROW Component="libflacsys_plugin.dll" ComponentId="{7ADCBA65-0F65-4425-8AE9-111A2B20E0F5}" Directory_="plugins_Dir" Attributes="0" KeyPath="libflacsys_plugin.dll"/>
+    <ROW Component="libfloat32_mixer_plugin.dll" ComponentId="{63E8C242-0DBE-4953-BAE0-8EF85458EB85}" Directory_="plugins_Dir" Attributes="0" KeyPath="libfloat32_mixer_plugin.dll"/>
+    <ROW Component="libfluidsynth_plugin.dll" ComponentId="{3AC8243C-F7B9-4203-9940-F21444E8B83D}" Directory_="plugins_Dir" Attributes="0" KeyPath="libfluidsynth_plugin.dll"/>
+    <ROW Component="libfolder_plugin.dll" ComponentId="{6161F5A0-564F-4318-AB0B-E7451BFD127B}" Directory_="plugins_Dir" Attributes="0" KeyPath="libfolder_plugin.dll"/>
+    <ROW Component="libfreetype_plugin.dll" ComponentId="{33CD0751-5E49-49FA-B4BD-F8DFD58B8A04}" Directory_="plugins_Dir" Attributes="0" KeyPath="libfreetype_plugin.dll"/>
+    <ROW Component="libgaussianblur_plugin.dll" ComponentId="{CB8C913D-4018-4A70-B80B-08D03676B12F}" Directory_="plugins_Dir" Attributes="0" KeyPath="libgaussianblur_plugin.dll"/>
+    <ROW Component="libgestures_plugin.dll" ComponentId="{CE8D157A-B7C3-47D8-9F4E-C0DFCC3577D4}" Directory_="plugins_Dir" Attributes="0" KeyPath="libgestures_plugin.dll"/>
+    <ROW Component="libglobalhotkeys_plugin.dll" ComponentId="{AEA2E928-DBC2-458C-BDEE-47E535C6487E}" Directory_="plugins_Dir" Attributes="0" KeyPath="libglobalhotkeys_plugin.dll"/>
+    <ROW Component="libglwin32_plugin.dll" ComponentId="{099D7F11-3CE7-4DF5-A480-27AF296241C6}" Directory_="plugins_Dir" Attributes="0" KeyPath="libglwin32_plugin.dll"/>
+    <ROW Component="libgme_plugin.dll" ComponentId="{DCA2070D-F0F1-453B-AB99-AF3D27BAFA8D}" Directory_="plugins_Dir" Attributes="0" KeyPath="libgme_plugin.dll"/>
+    <ROW Component="libgnutls_plugin.dll" ComponentId="{48E9F0A5-70E8-48C4-B426-5856CEEC5CBF}" Directory_="plugins_Dir" Attributes="0" KeyPath="libgnutls_plugin.dll"/>
+    <ROW Component="libgoom_plugin.dll" ComponentId="{FEBBB045-B31F-45B7-9AA1-2D87B5920B73}" Directory_="plugins_Dir" Attributes="0" KeyPath="libgoom_plugin.dll"/>
+    <ROW Component="libgradient_plugin.dll" ComponentId="{5333D3E3-773C-46C7-B33F-6F4406C7D791}" Directory_="plugins_Dir" Attributes="0" KeyPath="libgradient_plugin.dll"/>
+    <ROW Component="libgrain_plugin.dll" ComponentId="{6A51261E-B9AF-4A41-8AB6-8F100571F729}" Directory_="plugins_Dir" Attributes="0" KeyPath="libgrain_plugin.dll"/>
+    <ROW Component="libgrey_yuv_plugin.dll" ComponentId="{E7E5D850-C28A-4FA0-A0DD-784B9581B657}" Directory_="plugins_Dir" Attributes="0" KeyPath="libgrey_yuv_plugin.dll"/>
+    <ROW Component="libh264_plugin.dll" ComponentId="{9BD22375-4EB1-412B-B027-FAB3FD14C488}" Directory_="plugins_Dir" Attributes="0" KeyPath="libh264_plugin.dll"/>
+    <ROW Component="libheadphone_channel_mixer_plugin.dll" ComponentId="{196F483B-0E7F-4C76-824E-1E53FC8E04D1}" Directory_="plugins_Dir" Attributes="0" KeyPath="libheadphone_channel_mixer_plugin.dll"/>
+    <ROW Component="libhotkeys_plugin.dll" ComponentId="{128F54CD-800A-4137-8995-CF77854B5364}" Directory_="plugins_Dir" Attributes="0" KeyPath="libhotkeys_plugin.dll"/>
+    <ROW Component="libi420_rgb_mmx_plugin.dll" ComponentId="{EEB80887-0E19-4E29-904A-946BBB9BD66E}" Directory_="plugins_Dir" Attributes="0" KeyPath="libi420_rgb_mmx_plugin.dll"/>
+    <ROW Component="libi420_rgb_plugin.dll" ComponentId="{D5EE7E28-615D-4997-98B5-01843F7359A5}" Directory_="plugins_Dir" Attributes="0" KeyPath="libi420_rgb_plugin.dll"/>
+    <ROW Component="libi420_rgb_sse2_plugin.dll" ComponentId="{02814968-164E-436D-A00C-9046E08C8A77}" Directory_="plugins_Dir" Attributes="0" KeyPath="libi420_rgb_sse2_plugin.dll"/>
+    <ROW Component="libi420_yuy2_mmx_plugin.dll" ComponentId="{C28B0516-9E1F-4317-90C3-246FFCDBE791}" Directory_="plugins_Dir" Attributes="0" KeyPath="libi420_yuy2_mmx_plugin.dll"/>
+    <ROW Component="libi420_yuy2_plugin.dll" ComponentId="{36F55A7C-00E0-417A-A303-7D7265DDCAA9}" Directory_="plugins_Dir" Attributes="0" KeyPath="libi420_yuy2_plugin.dll"/>
+    <ROW Component="libi420_yuy2_sse2_plugin.dll" ComponentId="{E8D10847-9153-4152-ACE9-F05B9856FD2F}" Directory_="plugins_Dir" Attributes="0" KeyPath="libi420_yuy2_sse2_plugin.dll"/>
+    <ROW Component="libi422_i420_plugin.dll" ComponentId="{84C2AF67-999B-4DF8-A0D8-C3B02DF68E7D}" Directory_="plugins_Dir" Attributes="0" KeyPath="libi422_i420_plugin.dll"/>
+    <ROW Component="libi422_yuy2_mmx_plugin.dll" ComponentId="{81F606A1-DE83-4911-BB72-9383436D66BE}" Directory_="plugins_Dir" Attributes="0" KeyPath="libi422_yuy2_mmx_plugin.dll"/>
+    <ROW Component="libi422_yuy2_plugin.dll" ComponentId="{50B05550-6BAA-4D0C-8E12-A92FA773E07A}" Directory_="plugins_Dir" Attributes="0" KeyPath="libi422_yuy2_plugin.dll"/>
+    <ROW Component="libi422_yuy2_sse2_plugin.dll" ComponentId="{94DEB765-3D60-40D6-B073-5598A1C54399}" Directory_="plugins_Dir" Attributes="0" KeyPath="libi422_yuy2_sse2_plugin.dll"/>
+    <ROW Component="libinvert_plugin.dll" ComponentId="{6ABB3C82-320A-44EC-82B4-4D17416F4EAC}" Directory_="plugins_Dir" Attributes="0" KeyPath="libinvert_plugin.dll"/>
+    <ROW Component="libinvmem_plugin.dll" ComponentId="{E5E11E26-FD7D-4153-8F65-054E2774A851}" Directory_="plugins_Dir" Attributes="0" KeyPath="libinvmem_plugin.dll"/>
+    <ROW Component="libkate_plugin.dll" ComponentId="{28F90CCF-5A09-4D1C-8501-CC6A484CE200}" Directory_="plugins_Dir" Attributes="0" KeyPath="libkate_plugin.dll"/>
+    <ROW Component="liblibass_plugin.dll" ComponentId="{A7FBF43F-F942-48A5-9EDF-BBABD43A3264}" Directory_="plugins_Dir" Attributes="0" KeyPath="liblibass_plugin.dll"/>
+    <ROW Component="liblibmpeg2_plugin.dll" ComponentId="{FFC9EDE7-27CF-401F-BA3F-EAB9C37697BD}" Directory_="plugins_Dir" Attributes="0" KeyPath="liblibmpeg2_plugin.dll"/>
+    <ROW Component="liblive555_plugin.dll" ComponentId="{E5E62770-144E-4F1A-B304-B54CD5D94598}" Directory_="plugins_Dir" Attributes="0" KeyPath="liblive555_plugin.dll"/>
+    <ROW Component="liblogger_plugin.dll" ComponentId="{04873EA7-1DA3-421F-BF09-AE711FF647A9}" Directory_="plugins_Dir" Attributes="0" KeyPath="liblogger_plugin.dll"/>
+    <ROW Component="liblogo_plugin.dll" ComponentId="{23ADF01F-C4BB-4F99-9E75-CDCE54B4299A}" Directory_="plugins_Dir" Attributes="0" KeyPath="liblogo_plugin.dll"/>
+    <ROW Component="liblpcm_plugin.dll" ComponentId="{C24BB017-2B36-498A-B6DD-AA87A9FEE967}" Directory_="plugins_Dir" Attributes="0" KeyPath="liblpcm_plugin.dll"/>
+    <ROW Component="liblua_plugin.dll" ComponentId="{5DBEA599-9495-4E4E-9E9D-908034AF3C28}" Directory_="plugins_Dir" Attributes="0" KeyPath="liblua_plugin.dll"/>
+    <ROW Component="libmagnify_plugin.dll" ComponentId="{E4E6AFD2-82D4-43D8-B07A-76F34B60FE33}" Directory_="plugins_Dir" Attributes="0" KeyPath="libmagnify_plugin.dll"/>
+    <ROW Component="libmarq_plugin.dll" ComponentId="{D29517F7-39C4-4871-A7D9-65C01C0717B9}" Directory_="plugins_Dir" Attributes="0" KeyPath="libmarq_plugin.dll"/>
+    <ROW Component="libmediadirs_plugin.dll" ComponentId="{24FBE3E8-1DA6-4A19-AA9A-CB099E01FFC8}" Directory_="plugins_Dir" Attributes="0" KeyPath="libmediadirs_plugin.dll"/>
+    <ROW Component="libmemcpy3dn_plugin.dll" ComponentId="{0A83F047-71AF-4CC3-B3BC-810BC48EAEB6}" Directory_="plugins_Dir" Attributes="0" KeyPath="libmemcpy3dn_plugin.dll"/>
+    <ROW Component="libmemcpymmx_plugin.dll" ComponentId="{312134DB-2665-4062-9457-05A8077F393A}" Directory_="plugins_Dir" Attributes="0" KeyPath="libmemcpymmx_plugin.dll"/>
+    <ROW Component="libmemcpymmxext_plugin.dll" ComponentId="{8C843908-D023-487F-AB9D-9797416E8AC2}" Directory_="plugins_Dir" Attributes="0" KeyPath="libmemcpymmxext_plugin.dll"/>
+    <ROW Component="libmirror_plugin.dll" ComponentId="{BBE6DCA7-D17E-47F8-9B50-F4529DB6F652}" Directory_="plugins_Dir" Attributes="0" KeyPath="libmirror_plugin.dll"/>
+    <ROW Component="libmjpeg_plugin.dll" ComponentId="{223DD8F1-316D-4F38-84EE-63184044A698}" Directory_="plugins_Dir" Attributes="0" KeyPath="libmjpeg_plugin.dll"/>
+    <ROW Component="libmkv_plugin.dll" ComponentId="{A0514A9E-3166-4D98-81D3-BAD7D9F5FB69}" Directory_="plugins_Dir" Attributes="0" KeyPath="libmkv_plugin.dll"/>
+    <ROW Component="libmod_plugin.dll" ComponentId="{177207F6-6C9D-4B9E-94AA-27277F8F3D14}" Directory_="plugins_Dir" Attributes="0" KeyPath="libmod_plugin.dll"/>
+    <ROW Component="libmono_plugin.dll" ComponentId="{9256A3A6-7835-47BC-95E6-7BF052BAA7C3}" Directory_="plugins_Dir" Attributes="0" KeyPath="libmono_plugin.dll"/>
+    <ROW Component="libmosaic_plugin.dll" ComponentId="{C5FC9997-A2E2-4B36-8C95-9BE333A4F5B6}" Directory_="plugins_Dir" Attributes="0" KeyPath="libmosaic_plugin.dll"/>
+    <ROW Component="libmotionblur_plugin.dll" ComponentId="{50888C97-C406-47C6-BE05-C5CBAC9FD7F8}" Directory_="plugins_Dir" Attributes="0" KeyPath="libmotionblur_plugin.dll"/>
+    <ROW Component="libmotiondetect_plugin.dll" ComponentId="{B9050B84-7D07-449D-8CA1-978A0D83781A}" Directory_="plugins_Dir" Attributes="0" KeyPath="libmotiondetect_plugin.dll"/>
+    <ROW Component="libmp4_plugin.dll" ComponentId="{5D224B75-3A37-401C-8688-910D51CAD70F}" Directory_="plugins_Dir" Attributes="0" KeyPath="libmp4_plugin.dll"/>
+    <ROW Component="libmpc_plugin.dll" ComponentId="{7AFCB2D1-B1A8-4AF3-A270-3C0BF7CBE117}" Directory_="plugins_Dir" Attributes="0" KeyPath="libmpc_plugin.dll"/>
+    <ROW Component="libmpeg_audio_plugin.dll" ComponentId="{17E96F40-2C9E-4B3D-BD21-C6EF68305054}" Directory_="plugins_Dir" Attributes="0" KeyPath="libmpeg_audio_plugin.dll"/>
+    <ROW Component="libmpgatofixed32_plugin.dll" ComponentId="{0E85EFB8-AE5D-4165-BFA6-278B3927C9AA}" Directory_="plugins_Dir" Attributes="0" KeyPath="libmpgatofixed32_plugin.dll"/>
+    <ROW Component="libmpgv_plugin.dll" ComponentId="{D4691C0D-225F-4A74-99D4-9EE62B7E5DF7}" Directory_="plugins_Dir" Attributes="0" KeyPath="libmpgv_plugin.dll"/>
+    <ROW Component="libmsn_plugin.dll" ComponentId="{D14AA993-AC0B-40D1-A730-EFB989131581}" Directory_="plugins_Dir" Attributes="0" KeyPath="libmsn_plugin.dll"/>
+    <ROW Component="libmux_asf_plugin.dll" ComponentId="{2F7D0233-17B2-4109-A435-E0EC7D26690A}" Directory_="plugins_Dir" Attributes="0" KeyPath="libmux_asf_plugin.dll"/>
+    <ROW Component="libmux_avi_plugin.dll" ComponentId="{7C89DECB-9DC9-4387-859D-6E4B84EECAE4}" Directory_="plugins_Dir" Attributes="0" KeyPath="libmux_avi_plugin.dll"/>
+    <ROW Component="libmux_dummy_plugin.dll" ComponentId="{E55BE22B-6A23-452F-8B25-64C6557749C5}" Directory_="plugins_Dir" Attributes="0" KeyPath="libmux_dummy_plugin.dll"/>
+    <ROW Component="libmux_mp4_plugin.dll" ComponentId="{44E61C6C-FDEA-4ECA-97C1-D194A08A3A6A}" Directory_="plugins_Dir" Attributes="0" KeyPath="libmux_mp4_plugin.dll"/>
+    <ROW Component="libmux_mpjpeg_plugin.dll" ComponentId="{0046831D-584F-4270-87BC-234972FD105E}" Directory_="plugins_Dir" Attributes="0" KeyPath="libmux_mpjpeg_plugin.dll"/>
+    <ROW Component="libmux_ogg_plugin.dll" ComponentId="{B367C201-F507-4401-95AD-9AA91C3C80C9}" Directory_="plugins_Dir" Attributes="0" KeyPath="libmux_ogg_plugin.dll"/>
+    <ROW Component="libmux_ps_plugin.dll" ComponentId="{B95D8490-1EFF-4041-BA05-E59B47FE7554}" Directory_="plugins_Dir" Attributes="0" KeyPath="libmux_ps_plugin.dll"/>
+    <ROW Component="libmux_ts_plugin.dll" ComponentId="{495096B7-E24D-4571-BCDC-88F2C10290A0}" Directory_="plugins_Dir" Attributes="0" KeyPath="libmux_ts_plugin.dll"/>
+    <ROW Component="libmux_wav_plugin.dll" ComponentId="{217AEF9F-E2DF-4215-B6D7-227B8A46B16F}" Directory_="plugins_Dir" Attributes="0" KeyPath="libmux_wav_plugin.dll"/>
+    <ROW Component="libnetsync_plugin.dll" ComponentId="{91D0780E-0CAD-4638-9644-11ACD37852FC}" Directory_="plugins_Dir" Attributes="0" KeyPath="libnetsync_plugin.dll"/>
+    <ROW Component="libnoise_plugin.dll" ComponentId="{8A22A6CE-F91C-4C46-85AF-C60345586B98}" Directory_="plugins_Dir" Attributes="0" KeyPath="libnoise_plugin.dll"/>
+    <ROW Component="libnormvol_plugin.dll" ComponentId="{1ACD7085-9841-4CB9-ADDA-F63A418950A7}" Directory_="plugins_Dir" Attributes="0" KeyPath="libnormvol_plugin.dll"/>
+    <ROW Component="libnsc_plugin.dll" ComponentId="{673B14B6-A4B5-440A-B442-046A4403BBF9}" Directory_="plugins_Dir" Attributes="0" KeyPath="libnsc_plugin.dll"/>
+    <ROW Component="libnsv_plugin.dll" ComponentId="{86B980F7-AFD0-4CA4-BD88-3AC3D88E46FA}" Directory_="plugins_Dir" Attributes="0" KeyPath="libnsv_plugin.dll"/>
+    <ROW Component="libntservice_plugin.dll" ComponentId="{E9F5A629-A9AA-484D-B4A0-D65C81F85876}" Directory_="plugins_Dir" Attributes="0" KeyPath="libntservice_plugin.dll"/>
+    <ROW Component="libnuv_plugin.dll" ComponentId="{B709C56C-33E8-44E1-B684-4E1600A8E073}" Directory_="plugins_Dir" Attributes="0" KeyPath="libnuv_plugin.dll"/>
+    <ROW Component="libogg_plugin.dll" ComponentId="{41A04FB0-F695-47E3-81AD-2C3B3F57F92A}" Directory_="plugins_Dir" Attributes="0" KeyPath="libogg_plugin.dll"/>
+    <ROW Component="liboldhttp_plugin.dll" ComponentId="{C7CC0911-B376-4250-8620-64527F3255D8}" Directory_="plugins_Dir" Attributes="0" KeyPath="liboldhttp_plugin.dll"/>
+    <ROW Component="liboldrc_plugin.dll" ComponentId="{37D98757-6F3D-44A7-ABF8-E4C487E0DCD2}" Directory_="plugins_Dir" Attributes="0" KeyPath="liboldrc_plugin.dll"/>
+    <ROW Component="liboldtelnet_plugin.dll" ComponentId="{6BDBC66C-3919-4E91-97A0-5029B9FCFC59}" Directory_="plugins_Dir" Attributes="0" KeyPath="liboldtelnet_plugin.dll"/>
+    <ROW Component="libosd_parser_plugin.dll" ComponentId="{21091D2D-1DFE-482A-B96E-CC535CFAB5D1}" Directory_="plugins_Dir" Attributes="0" KeyPath="libosd_parser_plugin.dll"/>
+    <ROW Component="libosdmenu_plugin.dll" ComponentId="{360D6F3F-D27F-47EC-BFE9-8AEFB58B2197}" Directory_="plugins_Dir" Attributes="0" KeyPath="libosdmenu_plugin.dll"/>
+    <ROW Component="libpacketizer_copy_plugin.dll" ComponentId="{3775FC80-BD90-4531-BE98-70CECF4A45A6}" Directory_="plugins_Dir" Attributes="0" KeyPath="libpacketizer_copy_plugin.dll"/>
+    <ROW Component="libpacketizer_dirac_plugin.dll" ComponentId="{E2A816C6-36AD-4D67-BA51-4726FB3EC42D}" Directory_="plugins_Dir" Attributes="0" KeyPath="libpacketizer_dirac_plugin.dll"/>
+    <ROW Component="libpacketizer_flac_plugin.dll" ComponentId="{EC224F7B-5EC7-4196-A335-B3F6213FDB30}" Directory_="plugins_Dir" Attributes="0" KeyPath="libpacketizer_flac_plugin.dll"/>
+    <ROW Component="libpacketizer_h264_plugin.dll" ComponentId="{D74265C0-AE22-43D1-9C27-E6E0490CC00A}" Directory_="plugins_Dir" Attributes="0" KeyPath="libpacketizer_h264_plugin.dll"/>
+    <ROW Component="libpacketizer_mlp_plugin.dll" ComponentId="{2A3022B0-0BCA-4D22-BB5F-8B6C167E24CA}" Directory_="plugins_Dir" Attributes="0" KeyPath="libpacketizer_mlp_plugin.dll"/>
+    <ROW Component="libpacketizer_mpeg4audio_plugin.dll" ComponentId="{C6B60AE4-F18D-4BBA-A05C-6B154D2C4CB7}" Directory_="plugins_Dir" Attributes="0" KeyPath="libpacketizer_mpeg4audio_plugin.dll"/>
+    <ROW Component="libpacketizer_mpeg4video_plugin.dll" ComponentId="{44FB8371-103F-470E-A19A-9C75716C6F2E}" Directory_="plugins_Dir" Attributes="0" KeyPath="libpacketizer_mpeg4video_plugin.dll"/>
+    <ROW Component="libpacketizer_mpegvideo_plugin.dll" ComponentId="{C4291F6C-C7D3-401A-83F1-16BCCFD35E91}" Directory_="plugins_Dir" Attributes="0" KeyPath="libpacketizer_mpegvideo_plugin.dll"/>
+    <ROW Component="libpacketizer_vc1_plugin.dll" ComponentId="{83CFA3F9-AF3B-4546-8C99-50F6BC74ED39}" Directory_="plugins_Dir" Attributes="0" KeyPath="libpacketizer_vc1_plugin.dll"/>
+    <ROW Component="libpanoramix_plugin.dll" ComponentId="{99EF1A44-7398-4451-87EB-425D909CE45A}" Directory_="plugins_Dir" Attributes="0" KeyPath="libpanoramix_plugin.dll"/>
+    <ROW Component="libparam_eq_plugin.dll" ComponentId="{3D3FBA1A-433E-4FC9-8238-F88AB2CF0B10}" Directory_="plugins_Dir" Attributes="0" KeyPath="libparam_eq_plugin.dll"/>
+    <ROW Component="libplaylist_plugin.dll" ComponentId="{D5FEFC1A-318A-4594-A252-911AE0D51806}" Directory_="plugins_Dir" Attributes="0" KeyPath="libplaylist_plugin.dll"/>
+    <ROW Component="libpng_plugin.dll" ComponentId="{B4544629-5C33-47A4-8A0A-7FC792A24245}" Directory_="plugins_Dir" Attributes="0" KeyPath="libpng_plugin.dll"/>
+    <ROW Component="libpodcast_plugin.dll" ComponentId="{19B2FC92-0741-4808-BA1A-0F1360921C0B}" Directory_="plugins_Dir" Attributes="0" KeyPath="libpodcast_plugin.dll"/>
+    <ROW Component="libportaudio_plugin.dll" ComponentId="{F8569FFE-3EF3-4F4B-994E-D2E913C67E02}" Directory_="plugins_Dir" Attributes="0" KeyPath="libportaudio_plugin.dll"/>
+    <ROW Component="libpostproc_plugin.dll" ComponentId="{381FDAA4-A802-41BE-AE87-73FA32227F21}" Directory_="plugins_Dir" Attributes="0" KeyPath="libpostproc_plugin.dll"/>
+    <ROW Component="libprojectm_plugin.dll" ComponentId="{91E39D08-C40A-4CF3-B1A1-32917FA29D81}" Directory_="plugins_Dir" Attributes="0" KeyPath="libprojectm_plugin.dll"/>
+    <ROW Component="libps_plugin.dll" ComponentId="{32ED340E-0EA5-4029-8198-37BD63CF923D}" Directory_="plugins_Dir" Attributes="0" KeyPath="libps_plugin.dll"/>
+    <ROW Component="libpsychedelic_plugin.dll" ComponentId="{9913CCD7-F684-45CA-977B-B03F27B385DD}" Directory_="plugins_Dir" Attributes="0" KeyPath="libpsychedelic_plugin.dll"/>
+    <ROW Component="libpuzzle_plugin.dll" ComponentId="{29BE6688-A6BE-4026-80E8-CEA5B7CDDDA7}" Directory_="plugins_Dir" Attributes="0" KeyPath="libpuzzle_plugin.dll"/>
+    <ROW Component="libpva_plugin.dll" ComponentId="{EFF78DDD-15AC-49E9-AB99-530095A197E4}" Directory_="plugins_Dir" Attributes="0" KeyPath="libpva_plugin.dll"/>
+    <ROW Component="libquicktime_plugin.dll" ComponentId="{BFD57BBF-CC72-4A0E-8D61-657EEA5D465A}" Directory_="plugins_Dir" Attributes="0" KeyPath="libquicktime_plugin.dll"/>
+    <ROW Component="librawaud_plugin.dll" ComponentId="{4E731BC8-2C5D-4BC2-87CA-EE49561732BC}" Directory_="plugins_Dir" Attributes="0" KeyPath="librawaud_plugin.dll"/>
+    <ROW Component="librawdv_plugin.dll" ComponentId="{277EC146-C245-482F-BBC3-783EA559338B}" Directory_="plugins_Dir" Attributes="0" KeyPath="librawdv_plugin.dll"/>
+    <ROW Component="librawvid_plugin.dll" ComponentId="{5ABE0D31-9D0E-4F57-89AE-E1E0E230DD8F}" Directory_="plugins_Dir" Attributes="0" KeyPath="librawvid_plugin.dll"/>
+    <ROW Component="librawvideo_plugin.dll" ComponentId="{AE1F7ED2-A191-4F39-951D-BB0037D94174}" Directory_="plugins_Dir" Attributes="0" KeyPath="librawvideo_plugin.dll"/>
+    <ROW Component="libreal_plugin.dll" ComponentId="{D4A57272-0E84-4AEF-A815-C3621320D58F}" Directory_="plugins_Dir" Attributes="0" KeyPath="libreal_plugin.dll"/>
+    <ROW Component="librealvideo_plugin.dll" ComponentId="{45FF5F6D-8070-474C-8986-95D57F6C5E22}" Directory_="plugins_Dir" Attributes="0" KeyPath="librealvideo_plugin.dll"/>
+    <ROW Component="libremoteosd_plugin.dll" ComponentId="{40FCAECD-E1B4-4267-97C4-5EBD61B95354}" Directory_="plugins_Dir" Attributes="0" KeyPath="libremoteosd_plugin.dll"/>
+    <ROW Component="libripple_plugin.dll" ComponentId="{9F890776-7308-4E2C-B2F8-45105BB765A6}" Directory_="plugins_Dir" Attributes="0" KeyPath="libripple_plugin.dll"/>
+    <ROW Component="librotate_plugin.dll" ComponentId="{4661D815-62FD-49D9-879C-45CFA10CB753}" Directory_="plugins_Dir" Attributes="0" KeyPath="librotate_plugin.dll"/>
+    <ROW Component="librss_plugin.dll" ComponentId="{31859861-73DA-4769-91D5-6E1311A6B7C8}" Directory_="plugins_Dir" Attributes="0" KeyPath="librss_plugin.dll"/>
+    <ROW Component="librtp_plugin.dll" ComponentId="{4FC7A65D-11A4-4DF4-8BD6-031811EB23FD}" Directory_="plugins_Dir" Attributes="0" KeyPath="librtp_plugin.dll"/>
+    <ROW Component="librv32_plugin.dll" ComponentId="{13746095-C54E-4099-B4FF-718A3E42B689}" Directory_="plugins_Dir" Attributes="0" KeyPath="librv32_plugin.dll"/>
+    <ROW Component="libsap_plugin.dll" ComponentId="{963E5028-0BEF-43C3-AF6B-2892AEA92CAE}" Directory_="plugins_Dir" Attributes="0" KeyPath="libsap_plugin.dll"/>
+    <ROW Component="libscale_plugin.dll" ComponentId="{FEF3A266-56E1-4DC6-8447-CA018A9C7237}" Directory_="plugins_Dir" Attributes="0" KeyPath="libscale_plugin.dll"/>
+    <ROW Component="libscaletempo_plugin.dll" ComponentId="{2D02E8C0-67F0-4A57-B1B4-F7027A442677}" Directory_="plugins_Dir" Attributes="0" KeyPath="libscaletempo_plugin.dll"/>
+    <ROW Component="libscene_plugin.dll" ComponentId="{270C5702-B4A7-483A-A599-E405921DDB93}" Directory_="plugins_Dir" Attributes="0" KeyPath="libscene_plugin.dll"/>
+    <ROW Component="libschroedinger_plugin.dll" ComponentId="{F875F46D-20ED-420A-B505-05F6BCD710DD}" Directory_="plugins_Dir" Attributes="0" KeyPath="libschroedinger_plugin.dll"/>
+    <ROW Component="libscreen_plugin.dll" ComponentId="{1E57927A-CC17-4C83-BED0-D1C6E5F2DAF9}" Directory_="plugins_Dir" Attributes="0" KeyPath="libscreen_plugin.dll"/>
+    <ROW Component="libsdl_image_plugin.dll" ComponentId="{708A2F89-EDD7-426E-A27D-8689EF787042}" Directory_="plugins_Dir" Attributes="0" KeyPath="libsdl_image_plugin.dll"/>
+    <ROW Component="libsharpen_plugin.dll" ComponentId="{9046C821-07D3-4DBF-AEEB-D5500960505E}" Directory_="plugins_Dir" Attributes="0" KeyPath="libsharpen_plugin.dll"/>
+    <ROW Component="libsimple_channel_mixer_plugin.dll" ComponentId="{69CB7CDA-2621-40A3-92CC-FF94248BFEAC}" Directory_="plugins_Dir" Attributes="0" KeyPath="libsimple_channel_mixer_plugin.dll"/>
+    <ROW Component="libsmf_plugin.dll" ComponentId="{03979481-6539-4B3C-90EF-DD96A4826553}" Directory_="plugins_Dir" Attributes="0" KeyPath="libsmf_plugin.dll"/>
+    <ROW Component="libspatializer_plugin.dll" ComponentId="{BF957531-2229-4C28-B068-39DAE17059C1}" Directory_="plugins_Dir" Attributes="0" KeyPath="libspatializer_plugin.dll"/>
+    <ROW Component="libspdif_mixer_plugin.dll" ComponentId="{CC2D517A-6922-4EF8-A1ED-E783EE0FC584}" Directory_="plugins_Dir" Attributes="0" KeyPath="libspdif_mixer_plugin.dll"/>
+    <ROW Component="libspeex_plugin.dll" ComponentId="{49005FF6-9509-4B63-B637-DB52A97B7336}" Directory_="plugins_Dir" Attributes="0" KeyPath="libspeex_plugin.dll"/>
+    <ROW Component="libspudec_plugin.dll" ComponentId="{473683D5-A1EC-46E9-BA74-A0B0F9C54C3C}" Directory_="plugins_Dir" Attributes="0" KeyPath="libspudec_plugin.dll"/>
+    <ROW Component="libstats_plugin.dll" ComponentId="{0483CCDB-5BD2-4BB3-BF65-EF9DB1C51781}" Directory_="plugins_Dir" Attributes="0" KeyPath="libstats_plugin.dll"/>
+    <ROW Component="libstream_filter_rar_plugin.dll" ComponentId="{92923723-324D-4E91-9349-CF9E992DE1AE}" Directory_="plugins_Dir" Attributes="0" KeyPath="libstream_filter_rar_plugin.dll"/>
+    <ROW Component="libstream_filter_record_plugin.dll" ComponentId="{1F5E702D-4881-47F0-B892-BFE3764CC661}" Directory_="plugins_Dir" Attributes="0" KeyPath="libstream_filter_record_plugin.dll"/>
+    <ROW Component="libstream_out_autodel_plugin.dll" ComponentId="{B0150BDB-2E0B-44AE-B69D-6878310E65A2}" Directory_="plugins_Dir" Attributes="0" KeyPath="libstream_out_autodel_plugin.dll"/>
+    <ROW Component="libstream_out_bridge_plugin.dll" ComponentId="{F2138D1B-1413-4559-AB08-629BBE53B283}" Directory_="plugins_Dir" Attributes="0" KeyPath="libstream_out_bridge_plugin.dll"/>
+    <ROW Component="libstream_out_description_plugin.dll" ComponentId="{3417BCF9-A063-4304-8D76-DB193E283128}" Directory_="plugins_Dir" Attributes="0" KeyPath="libstream_out_description_plugin.dll"/>
+    <ROW Component="libstream_out_display_plugin.dll" ComponentId="{887DC9C9-17B1-401B-9C2D-DD020BBEE80B}" Directory_="plugins_Dir" Attributes="0" KeyPath="libstream_out_display_plugin.dll"/>
+    <ROW Component="libstream_out_dummy_plugin.dll" ComponentId="{640C40C3-EA4A-4E45-9D99-F5A84A135211}" Directory_="plugins_Dir" Attributes="0" KeyPath="libstream_out_dummy_plugin.dll"/>
+    <ROW Component="libstream_out_duplicate_plugin.dll" ComponentId="{2FD8D0AF-1DAD-4CC8-A94B-CB509A6D021C}" Directory_="plugins_Dir" Attributes="0" KeyPath="libstream_out_duplicate_plugin.dll"/>
+    <ROW Component="libstream_out_es_plugin.dll" ComponentId="{681C6A61-193C-48C1-9EE2-5FA92AD729B3}" Directory_="plugins_Dir" Attributes="0" KeyPath="libstream_out_es_plugin.dll"/>
+    <ROW Component="libstream_out_gather_plugin.dll" ComponentId="{76F88F05-5B5A-4D60-97DC-0F5B2890986D}" Directory_="plugins_Dir" Attributes="0" KeyPath="libstream_out_gather_plugin.dll"/>
+    <ROW Component="libstream_out_mosaic_bridge_plugin.dll" ComponentId="{7789E00D-95BA-44E2-BD01-CEF715A760DE}" Directory_="plugins_Dir" Attributes="0" KeyPath="libstream_out_mosaic_bridge_plugin.dll"/>
+    <ROW Component="libstream_out_raop_plugin.dll" ComponentId="{2086B744-28B6-4C9B-85EE-20490FB35324}" Directory_="plugins_Dir" Attributes="0" KeyPath="libstream_out_raop_plugin.dll"/>
+    <ROW Component="libstream_out_record_plugin.dll" ComponentId="{989FF5C4-8B01-4D6D-952A-E04E50712379}" Directory_="plugins_Dir" Attributes="0" KeyPath="libstream_out_record_plugin.dll"/>
+    <ROW Component="libstream_out_rtp_plugin.dll" ComponentId="{C3E61941-7CD9-4C40-8717-927DD4CA41F3}" Directory_="plugins_Dir" Attributes="0" KeyPath="libstream_out_rtp_plugin.dll"/>
+    <ROW Component="libstream_out_smem_plugin.dll" ComponentId="{0BA22DF4-18DE-47E8-9EE7-E29B10150DE5}" Directory_="plugins_Dir" Attributes="0" KeyPath="libstream_out_smem_plugin.dll"/>
+    <ROW Component="libstream_out_standard_plugin.dll" ComponentId="{4AC97D0C-5E34-4744-B3BA-A124614F0879}" Directory_="plugins_Dir" Attributes="0" KeyPath="libstream_out_standard_plugin.dll"/>
+    <ROW Component="libstream_out_transcode_plugin.dll" ComponentId="{F72B8C40-5873-4450-9F04-1243E2F2817F}" Directory_="plugins_Dir" Attributes="0" KeyPath="libstream_out_transcode_plugin.dll"/>
+    <ROW Component="libsubsdec_plugin.dll" ComponentId="{C901841E-65F8-46C6-ACFA-0293E7DFF17A}" Directory_="plugins_Dir" Attributes="0" KeyPath="libsubsdec_plugin.dll"/>
+    <ROW Component="libsubsusf_plugin.dll" ComponentId="{CA96F1E6-6B4D-4122-8A07-055F6FC4EA8F}" Directory_="plugins_Dir" Attributes="0" KeyPath="libsubsusf_plugin.dll"/>
+    <ROW Component="libsubtitle_plugin.dll" ComponentId="{7F9DCE9C-366D-415C-AAD8-DA46A2D4C803}" Directory_="plugins_Dir" Attributes="0" KeyPath="libsubtitle_plugin.dll"/>
+    <ROW Component="libsvcdsub_plugin.dll" ComponentId="{3FB4A2B6-1F4E-4714-A588-F229E37D8069}" Directory_="plugins_Dir" Attributes="0" KeyPath="libsvcdsub_plugin.dll"/>
+    <ROW Component="libswscale_plugin.dll" ComponentId="{F8BF1580-C162-4C84-A2FF-5E221AACD6AC}" Directory_="plugins_Dir" Attributes="0" KeyPath="libswscale_plugin.dll"/>
+    <ROW Component="libt140_plugin.dll" ComponentId="{668C0112-FB6B-4CFB-8387-95475D6FB609}" Directory_="plugins_Dir" Attributes="0" KeyPath="libt140_plugin.dll"/>
+    <ROW Component="libtaglib_plugin.dll" ComponentId="{DAFDDD8E-D8E9-4EE0-8BAE-6D4EE3BC244A}" Directory_="plugins_Dir" Attributes="0" KeyPath="libtaglib_plugin.dll"/>
+    <ROW Component="libtheora_plugin.dll" ComponentId="{A841977E-81AE-4207-B96A-3BD1157538FD}" Directory_="plugins_Dir" Attributes="0" KeyPath="libtheora_plugin.dll"/>
+    <ROW Component="libtransform_plugin.dll" ComponentId="{41FD7BD5-2EB3-4116-BE78-0C0C4F0C5AC6}" Directory_="plugins_Dir" Attributes="0" KeyPath="libtransform_plugin.dll"/>
+    <ROW Component="libtrivial_channel_mixer_plugin.dll" ComponentId="{B41533B8-27C1-459F-928A-E0B93DF047A0}" Directory_="plugins_Dir" Attributes="0" KeyPath="libtrivial_channel_mixer_plugin.dll"/>
+    <ROW Component="libtrivial_mixer_plugin.dll" ComponentId="{7BB0BB99-04F8-4703-A87D-969455F01723}" Directory_="plugins_Dir" Attributes="0" KeyPath="libtrivial_mixer_plugin.dll"/>
+    <ROW Component="libts_plugin.dll" ComponentId="{CB0F01AD-87DF-46B0-BA81-C5C724F814CE}" Directory_="plugins_Dir" Attributes="0" KeyPath="libts_plugin.dll"/>
+    <ROW Component="libtta_plugin.dll" ComponentId="{4C56BD91-D85E-461A-9A37-1CDF10EC0030}" Directory_="plugins_Dir" Attributes="0" KeyPath="libtta_plugin.dll"/>
+    <ROW Component="libtwolame_plugin.dll" ComponentId="{CC7DEED1-27E3-452F-9525-DDE4104E5DC7}" Directory_="plugins_Dir" Attributes="0" KeyPath="libtwolame_plugin.dll"/>
+    <ROW Component="libty_plugin.dll" ComponentId="{54B38879-2743-4879-A01A-1113A0F0F646}" Directory_="plugins_Dir" Attributes="0" KeyPath="libty_plugin.dll"/>
+    <ROW Component="libugly_resampler_plugin.dll" ComponentId="{8A593396-0495-47F3-9CF9-2D4AF8E2CDF1}" Directory_="plugins_Dir" Attributes="0" KeyPath="libugly_resampler_plugin.dll"/>
+    <ROW Component="libvc1_plugin.dll" ComponentId="{9351FB57-5349-42B0-A44F-EF6CB7146BDD}" Directory_="plugins_Dir" Attributes="0" KeyPath="libvc1_plugin.dll"/>
+    <ROW Component="libvcd_plugin.dll" ComponentId="{9C0EBD2A-CE16-4A30-B6F5-66097D6B524E}" Directory_="plugins_Dir" Attributes="0" KeyPath="libvcd_plugin.dll"/>
+    <ROW Component="libvideo_filter_wrapper_plugin.dll" ComponentId="{C1F1F676-6476-4A81-86D3-F6F8F9B09722}" Directory_="plugins_Dir" Attributes="0" KeyPath="libvideo_filter_wrapper_plugin.dll"/>
+    <ROW Component="libvisual_plugin.dll" ComponentId="{32CDE92F-F49F-484F-AF5A-D1EC92920B32}" Directory_="plugins_Dir" Attributes="0" KeyPath="libvisual_plugin.dll"/>
+    <ROW Component="libvlc.dll" ComponentId="{D682BEF3-9CB4-4DE9-9B10-FDC4851991AF}" Directory_="vlc_Dir" Attributes="0" KeyPath="libvlc.dll"/>
+    <ROW Component="libvlccore.dll" ComponentId="{68B95A6A-9AB0-43AF-A5FC-27D5F0BFE767}" Directory_="vlc_Dir" Attributes="0" KeyPath="libvlccore.dll"/>
+    <ROW Component="libvmem_plugin.dll" ComponentId="{6B6775A7-8134-433F-A303-584102929D2C}" Directory_="plugins_Dir" Attributes="0" KeyPath="libvmem_plugin.dll"/>
+    <ROW Component="libvobsub_plugin.dll" ComponentId="{CF552D80-684E-4356-B92A-C942ACC35CF2}" Directory_="plugins_Dir" Attributes="0" KeyPath="libvobsub_plugin.dll"/>
+    <ROW Component="libvoc_plugin.dll" ComponentId="{9361A21A-DBDD-46B4-AE37-2660F6CC4E3C}" Directory_="plugins_Dir" Attributes="0" KeyPath="libvoc_plugin.dll"/>
+    <ROW Component="libvod_rtsp_plugin.dll" ComponentId="{46CBA039-9CB0-4895-B61F-7EAA364B69E9}" Directory_="plugins_Dir" Attributes="0" KeyPath="libvod_rtsp_plugin.dll"/>
+    <ROW Component="libvorbis_plugin.dll" ComponentId="{91195EE4-869F-418D-BF03-1E21F64BBBA5}" Directory_="plugins_Dir" Attributes="0" KeyPath="libvorbis_plugin.dll"/>
+    <ROW Component="libvout_sdl_plugin.dll" ComponentId="{8D0F17C3-1948-4BBF-AEDA-DD08F2D3AF80}" Directory_="plugins_Dir" Attributes="0" KeyPath="libvout_sdl_plugin.dll"/>
+    <ROW Component="libvout_wrapper_plugin.dll" ComponentId="{BE21696F-D9B7-49A2-9B2A-40C6023B9049}" Directory_="plugins_Dir" Attributes="0" KeyPath="libvout_wrapper_plugin.dll"/>
+    <ROW Component="libwall_plugin.dll" ComponentId="{0D569821-4527-4249-BE96-0E32FB030FDE}" Directory_="plugins_Dir" Attributes="0" KeyPath="libwall_plugin.dll"/>
+    <ROW Component="libwav_plugin.dll" ComponentId="{24D0C11F-EFC2-4CBD-86D1-3CEF0437EAF4}" Directory_="plugins_Dir" Attributes="0" KeyPath="libwav_plugin.dll"/>
+    <ROW Component="libwave_plugin.dll" ComponentId="{854EC262-7FDD-4016-B0D8-6EA54CBFA26E}" Directory_="plugins_Dir" Attributes="0" KeyPath="libwave_plugin.dll"/>
+    <ROW Component="libwaveout_plugin.dll" ComponentId="{A222808E-17A1-4085-BCF5-807D504A368B}" Directory_="plugins_Dir" Attributes="0" KeyPath="libwaveout_plugin.dll"/>
+    <ROW Component="libwingdi_plugin.dll" ComponentId="{9F05C1A5-60FF-4A43-B44E-2BEF87F8C1C8}" Directory_="plugins_Dir" Attributes="0" KeyPath="libwingdi_plugin.dll"/>
+    <ROW Component="libx264_plugin.dll" ComponentId="{30BF16E0-40BC-4AD4-A0C5-8C0F5B1FB1EC}" Directory_="plugins_Dir" Attributes="0" KeyPath="libx264_plugin.dll"/>
+    <ROW Component="libxa_plugin.dll" ComponentId="{28648D6B-F937-49E8-9562-18736D087EB9}" Directory_="plugins_Dir" Attributes="0" KeyPath="libxa_plugin.dll"/>
+    <ROW Component="libxml_plugin.dll" ComponentId="{AFD88402-974F-4AA0-9B16-E9E55C1D8BEF}" Directory_="plugins_Dir" Attributes="0" KeyPath="libxml_plugin.dll"/>
+    <ROW Component="libxtag_plugin.dll" ComponentId="{F8BBFEE7-CBB4-4C54-AEB3-7FD9F4E83C88}" Directory_="plugins_Dir" Attributes="0" KeyPath="libxtag_plugin.dll"/>
+    <ROW Component="libyuv_plugin.dll" ComponentId="{500F15A8-5619-48B4-B94B-12F95029370E}" Directory_="plugins_Dir" Attributes="0" KeyPath="libyuv_plugin.dll"/>
+    <ROW Component="libyuvp_plugin.dll" ComponentId="{DCB2C57A-EB4C-4937-B767-532E80AE6ACE}" Directory_="plugins_Dir" Attributes="0" KeyPath="libyuvp_plugin.dll"/>
+    <ROW Component="libyuy2_i420_plugin.dll" ComponentId="{DE4192D5-1F5B-4E26-A563-2CF2E973716F}" Directory_="plugins_Dir" Attributes="0" KeyPath="libyuy2_i420_plugin.dll"/>
+    <ROW Component="libyuy2_i422_plugin.dll" ComponentId="{32BB4BB2-A1AE-417D-B3DA-A35E450C2518}" Directory_="plugins_Dir" Attributes="0" KeyPath="libyuy2_i422_plugin.dll"/>
+    <ROW Component="libzip_plugin.dll" ComponentId="{D5ABE73C-684B-4952-922D-B835370E6DAB}" Directory_="plugins_Dir" Attributes="0" KeyPath="libzip_plugin.dll"/>
+    <ROW Component="libzvbi_plugin.dll" ComponentId="{2377C254-87A5-47F6-9C6D-771C9828C1A4}" Directory_="plugins_Dir" Attributes="0" KeyPath="libzvbi_plugin.dll"/>
+    <ROW Component="plugins_04041e_fe8.dat" ComponentId="{2D428475-3955-4D1E-BE02-78F926930EA1}" Directory_="plugins_Dir" Attributes="0" KeyPath="plugins_04041e_fe8.dat" Type="0"/>
+    <ROW Component="settv.exe" ComponentId="{3797DB7B-385E-40FC-B17C-461FF1A10F05}" Directory_="APPDIR" Attributes="0" KeyPath="settv.exe"/>
+    <ROW Component="settv.vshost.exe" ComponentId="{8938FA16-C496-496A-989D-9ECAC1ABE1EC}" Directory_="APPDIR" Attributes="0" KeyPath="settv.vshost.exe"/>
+    <ROW Component="settv.vshost.exe.manifest" ComponentId="{1C628880-6C2C-4C19-A9E7-27253328A033}" Directory_="APPDIR" Attributes="0" KeyPath="settv.exe.config" Type="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
+    <ROW Feature="AF6A8838_0269_46AF_B128_A460BD2C6136" Title="AF6A8838_0269_46AF_B128_A460BD2C6136" Description="Adobe Flash Player 10" Display="3" Level="1" Attributes="0" Components="AF6A8838_0269_46AF_B128_A460BD2C6136"/>
+    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0" Components="AI_ExePath AxInterop.AXVLC.dll AxInterop.ShockwaveFlashObjects.dll AxInterop.WMPLib.dll CrawlerLib.Net.dll HtmlAgilityPack.dll Interop.AXVLC.dll Interop.ShockwaveFlashObjects.dll Interop.WMPLib.dll ProductInformation SHORTCUTDIR STVControls.dll axvlc.dll liba52_plugin.dll liba52tofloat32_plugin.dll liba52tospdif_plugin.dll libaccess_attachment_plugin.dll libaccess_bd_plugin.dll libaccess_fake_plugin.dll libaccess_ftp_plugin.dll libaccess_http_plugin.dll libaccess_imem_plugin.dll libaccess_mms_plugin.dll libaccess_output_dummy_plugin.dll libaccess_output_file_plugin.dll libaccess_output_http_plugin.dll libaccess_output_shout_plugin.dll libaccess_output_udp_plugin.dll libaccess_realrtsp_plugin.dll libaccess_smb_plugin.dll libaccess_tcp_plugin.dll libaccess_udp_plugin.dll libadjust_plugin.dll libadpcm_plugin.dll libaes3_plugin.dll libaiff_plugin.dll libalphamask_plugin.dll libaout_directx_plugin.dll libaout_file_plugin.dll libaout_sdl_plugin.dll libaraw_plugin.dll libasf_plugin.dll libatmo_plugin.dll libau_plugin.dll libaudio_format_plugin.dll libaudiobargraph_a_plugin.dll libaudiobargraph_v_plugin.dll libaudioscrobbler_plugin.dll libavcodec_plugin.dll libavi_plugin.dll libball_plugin.dll libbda_plugin.dll libblend_plugin.dll libblendbench_plugin.dll libbluescreen_plugin.dll libcaca_plugin.dll libcanvas_plugin.dll libcc_plugin.dll libcdda_plugin.dll libcdg_plugin.dll libchain_plugin.dll libchorus_flanger_plugin.dll libclone_plugin.dll libcolorthres_plugin.dll libconverter_fixed_plugin.dll libcrop_plugin.dll libcroppadd_plugin.dll libcvdsub_plugin.dll libdeinterlace_plugin.dll libdemux_cdg_plugin.dll libdemuxdump_plugin.dll libdirac_plugin.dll libdirect3d_plugin.dll libdirectx_plugin.dll libdmo_plugin.dll libdolby_surround_decoder_plugin.dll libdrawable_plugin.dll libdshow_plugin.dll libdts_plugin.dll libdtstofloat32_plugin.dll libdtstospdif_plugin.dll libdummy_plugin.dll libdvbsub_plugin.dll libdvdnav_plugin.dll libdvdread_plugin.dll libequalizer_plugin.dll liberase_plugin.dll libes_plugin.dll libexport_plugin.dll libextract_plugin.dll libfaad_plugin.dll libfake_plugin.dll libfilesystem_plugin.dll libflac_plugin.dll libflacsys_plugin.dll libfloat32_mixer_plugin.dll libfluidsynth_plugin.dll libfolder_plugin.dll libfreetype_plugin.dll libgaussianblur_plugin.dll libgestures_plugin.dll libglobalhotkeys_plugin.dll libglwin32_plugin.dll libgme_plugin.dll libgnutls_plugin.dll libgoom_plugin.dll libgradient_plugin.dll libgrain_plugin.dll libgrey_yuv_plugin.dll libh264_plugin.dll libheadphone_channel_mixer_plugin.dll libhotkeys_plugin.dll libi420_rgb_mmx_plugin.dll libi420_rgb_plugin.dll libi420_rgb_sse2_plugin.dll libi420_yuy2_mmx_plugin.dll libi420_yuy2_plugin.dll libi420_yuy2_sse2_plugin.dll libi422_i420_plugin.dll libi422_yuy2_mmx_plugin.dll libi422_yuy2_plugin.dll libi422_yuy2_sse2_plugin.dll libinvert_plugin.dll libinvmem_plugin.dll libkate_plugin.dll liblibass_plugin.dll liblibmpeg2_plugin.dll liblive555_plugin.dll liblogger_plugin.dll liblogo_plugin.dll liblpcm_plugin.dll liblua_plugin.dll libmagnify_plugin.dll libmarq_plugin.dll libmediadirs_plugin.dll libmemcpy3dn_plugin.dll libmemcpymmx_plugin.dll libmemcpymmxext_plugin.dll libmirror_plugin.dll libmjpeg_plugin.dll libmkv_plugin.dll libmod_plugin.dll libmono_plugin.dll libmosaic_plugin.dll libmotionblur_plugin.dll libmotiondetect_plugin.dll libmp4_plugin.dll libmpc_plugin.dll libmpeg_audio_plugin.dll libmpgatofixed32_plugin.dll libmpgv_plugin.dll libmsn_plugin.dll libmux_asf_plugin.dll libmux_avi_plugin.dll libmux_dummy_plugin.dll libmux_mp4_plugin.dll libmux_mpjpeg_plugin.dll libmux_ogg_plugin.dll libmux_ps_plugin.dll libmux_ts_plugin.dll libmux_wav_plugin.dll libnetsync_plugin.dll libnoise_plugin.dll libnormvol_plugin.dll libnsc_plugin.dll libnsv_plugin.dll libntservice_plugin.dll libnuv_plugin.dll libogg_plugin.dll liboldhttp_plugin.dll liboldrc_plugin.dll liboldtelnet_plugin.dll libosd_parser_plugin.dll libosdmenu_plugin.dll libpacketizer_copy_plugin.dll libpacketizer_dirac_plugin.dll libpacketizer_flac_plugin.dll libpacketizer_h264_plugin.dll libpacketizer_mlp_plugin.dll libpacketizer_mpeg4audio_plugin.dll libpacketizer_mpeg4video_plugin.dll libpacketizer_mpegvideo_plugin.dll libpacketizer_vc1_plugin.dll libpanoramix_plugin.dll libparam_eq_plugin.dll libplaylist_plugin.dll libpng_plugin.dll libpodcast_plugin.dll libportaudio_plugin.dll libpostproc_plugin.dll libprojectm_plugin.dll libps_plugin.dll libpsychedelic_plugin.dll libpuzzle_plugin.dll libpva_plugin.dll libquicktime_plugin.dll librawaud_plugin.dll librawdv_plugin.dll librawvid_plugin.dll librawvideo_plugin.dll libreal_plugin.dll librealvideo_plugin.dll libremoteosd_plugin.dll libripple_plugin.dll librotate_plugin.dll librss_plugin.dll librtp_plugin.dll librv32_plugin.dll libsap_plugin.dll libscale_plugin.dll libscaletempo_plugin.dll libscene_plugin.dll libschroedinger_plugin.dll libscreen_plugin.dll libsdl_image_plugin.dll libsharpen_plugin.dll libsimple_channel_mixer_plugin.dll libsmf_plugin.dll libspatializer_plugin.dll libspdif_mixer_plugin.dll libspeex_plugin.dll libspudec_plugin.dll libstats_plugin.dll libstream_filter_rar_plugin.dll libstream_filter_record_plugin.dll libstream_out_autodel_plugin.dll libstream_out_bridge_plugin.dll libstream_out_description_plugin.dll libstream_out_display_plugin.dll libstream_out_dummy_plugin.dll libstream_out_duplicate_plugin.dll libstream_out_es_plugin.dll libstream_out_gather_plugin.dll libstream_out_mosaic_bridge_plugin.dll libstream_out_raop_plugin.dll libstream_out_record_plugin.dll libstream_out_rtp_plugin.dll libstream_out_smem_plugin.dll libstream_out_standard_plugin.dll libstream_out_transcode_plugin.dll libsubsdec_plugin.dll libsubsusf_plugin.dll libsubtitle_plugin.dll libsvcdsub_plugin.dll libswscale_plugin.dll libt140_plugin.dll libtaglib_plugin.dll libtheora_plugin.dll libtransform_plugin.dll libtrivial_channel_mixer_plugin.dll libtrivial_mixer_plugin.dll libts_plugin.dll libtta_plugin.dll libtwolame_plugin.dll libty_plugin.dll libugly_resampler_plugin.dll libvc1_plugin.dll libvcd_plugin.dll libvideo_filter_wrapper_plugin.dll libvisual_plugin.dll libvlc.dll libvlccore.dll libvmem_plugin.dll libvobsub_plugin.dll libvoc_plugin.dll libvod_rtsp_plugin.dll libvorbis_plugin.dll libvout_sdl_plugin.dll libvout_wrapper_plugin.dll libwall_plugin.dll libwav_plugin.dll libwave_plugin.dll libwaveout_plugin.dll libwingdi_plugin.dll libx264_plugin.dll libxa_plugin.dll libxml_plugin.dll libxtag_plugin.dll libyuv_plugin.dll libyuvp_plugin.dll libyuy2_i420_plugin.dll libyuy2_i422_plugin.dll libzip_plugin.dll libzvbi_plugin.dll plugins_04041e_fe8.dat settv.exe settv.vshost.exe settv.vshost.exe.manifest"/>
+    <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="AxInterop.AXVLC.dll" Component_="AxInterop.AXVLC.dll" FileName="AxInte~1.dll|AxInterop.AXVLC.dll" Attributes="0" SourcePath="..\settv\bin\Release\AxInterop.AXVLC.dll" SelfReg="false" NextFile="AxInterop.ShockwaveFlashObjects.dll"/>
+    <ROW File="AxInterop.ShockwaveFlashObjects.dll" Component_="AxInterop.ShockwaveFlashObjects.dll" FileName="AxInte~2.dll|AxInterop.ShockwaveFlashObjects.dll" Attributes="0" SourcePath="..\settv\bin\Release\AxInterop.ShockwaveFlashObjects.dll" SelfReg="false" NextFile="Interop.AXVLC.dll"/>
+    <ROW File="AxInterop.WMPLib.dll" Component_="AxInterop.WMPLib.dll" FileName="AxInte~3.dll|AxInterop.WMPLib.dll" Attributes="0" SourcePath="..\settv\bin\Release\AxInterop.WMPLib.dll" SelfReg="false" NextFile="Interop.WMPLib.dll"/>
+    <ROW File="CrawlerLib.Net.dll" Component_="CrawlerLib.Net.dll" FileName="Crawle~1.dll|CrawlerLib.Net.dll" Attributes="0" SourcePath="..\settv\bin\Release\CrawlerLib.Net.dll" SelfReg="false" NextFile="settv.exe.config"/>
+    <ROW File="HtmlAgilityPack.dll" Component_="HtmlAgilityPack.dll" FileName="HtmlAg~1.dll|HtmlAgilityPack.dll" Attributes="0" SourcePath="..\settv\bin\Release\HtmlAgilityPack.dll" SelfReg="false" NextFile="settv.vshost.exe"/>
+    <ROW File="Interop.AXVLC.dll" Component_="Interop.AXVLC.dll" FileName="Intero~1.dll|Interop.AXVLC.dll" Attributes="0" SourcePath="..\settv\bin\Release\Interop.AXVLC.dll" SelfReg="false" NextFile="Interop.ShockwaveFlashObjects.dll"/>
+    <ROW File="Interop.ShockwaveFlashObjects.dll" Component_="Interop.ShockwaveFlashObjects.dll" FileName="Intero~2.dll|Interop.ShockwaveFlashObjects.dll" Attributes="0" SourcePath="..\settv\bin\Release\Interop.ShockwaveFlashObjects.dll" SelfReg="false" NextFile="settv.exe"/>
+    <ROW File="Interop.WMPLib.dll" Component_="Interop.WMPLib.dll" FileName="Intero~3.dll|Interop.WMPLib.dll" Attributes="0" SourcePath="..\settv\bin\Release\Interop.WMPLib.dll" SelfReg="false" NextFile="CrawlerLib.Net.dll"/>
+    <ROW File="STVControls.dll" Component_="STVControls.dll" FileName="STVCon~1.dll|STVControls.dll" Attributes="0" SourcePath="..\settv\bin\Release\STVControls.dll" SelfReg="false" NextFile="axvlc.dll"/>
+    <ROW File="axvlc.dll" Component_="axvlc.dll" FileName="axvlc.dll" Attributes="0" SourcePath="..\libs\vlc\axvlc.dll" SelfReg="true" NextFile="libvlc.dll"/>
+    <ROW File="liba52_plugin.dll" Component_="liba52_plugin.dll" FileName="liba52~3.dll|liba52_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\liba52_plugin.dll" SelfReg="false" NextFile="libaccess_attachment_plugin.dll"/>
+    <ROW File="liba52tofloat32_plugin.dll" Component_="liba52tofloat32_plugin.dll" FileName="liba52~1.dll|liba52tofloat32_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\liba52tofloat32_plugin.dll" SelfReg="false" NextFile="liba52tospdif_plugin.dll"/>
+    <ROW File="liba52tospdif_plugin.dll" Component_="liba52tospdif_plugin.dll" FileName="liba52~2.dll|liba52tospdif_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\liba52tospdif_plugin.dll" SelfReg="false" NextFile="liba52_plugin.dll"/>
+    <ROW File="libaccess_attachment_plugin.dll" Component_="libaccess_attachment_plugin.dll" FileName="libacc~1.dll|libaccess_attachment_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libaccess_attachment_plugin.dll" SelfReg="false" NextFile="libaccess_bd_plugin.dll"/>
+    <ROW File="libaccess_bd_plugin.dll" Component_="libaccess_bd_plugin.dll" FileName="libacc~2.dll|libaccess_bd_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libaccess_bd_plugin.dll" SelfReg="false" NextFile="libaccess_fake_plugin.dll"/>
+    <ROW File="libaccess_fake_plugin.dll" Component_="libaccess_fake_plugin.dll" FileName="libacc~3.dll|libaccess_fake_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libaccess_fake_plugin.dll" SelfReg="false" NextFile="libaccess_ftp_plugin.dll"/>
+    <ROW File="libaccess_ftp_plugin.dll" Component_="libaccess_ftp_plugin.dll" FileName="libacc~4.dll|libaccess_ftp_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libaccess_ftp_plugin.dll" SelfReg="false" NextFile="libaccess_http_plugin.dll"/>
+    <ROW File="libaccess_http_plugin.dll" Component_="libaccess_http_plugin.dll" FileName="libacc~5.dll|libaccess_http_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libaccess_http_plugin.dll" SelfReg="false" NextFile="libaccess_imem_plugin.dll"/>
+    <ROW File="libaccess_imem_plugin.dll" Component_="libaccess_imem_plugin.dll" FileName="libacc~6.dll|libaccess_imem_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libaccess_imem_plugin.dll" SelfReg="false" NextFile="libaccess_mms_plugin.dll"/>
+    <ROW File="libaccess_mms_plugin.dll" Component_="libaccess_mms_plugin.dll" FileName="libacc~7.dll|libaccess_mms_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libaccess_mms_plugin.dll" SelfReg="false" NextFile="libaccess_output_dummy_plugin.dll"/>
+    <ROW File="libaccess_output_dummy_plugin.dll" Component_="libaccess_output_dummy_plugin.dll" FileName="libacc~8.dll|libaccess_output_dummy_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libaccess_output_dummy_plugin.dll" SelfReg="false" NextFile="libaccess_output_file_plugin.dll"/>
+    <ROW File="libaccess_output_file_plugin.dll" Component_="libaccess_output_file_plugin.dll" FileName="libacc~9.dll|libaccess_output_file_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libaccess_output_file_plugin.dll" SelfReg="false" NextFile="libaccess_output_http_plugin.dll"/>
+    <ROW File="libaccess_output_http_plugin.dll" Component_="libaccess_output_http_plugin.dll" FileName="libac~10.dll|libaccess_output_http_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libaccess_output_http_plugin.dll" SelfReg="false" NextFile="libaccess_output_shout_plugin.dll"/>
+    <ROW File="libaccess_output_shout_plugin.dll" Component_="libaccess_output_shout_plugin.dll" FileName="libac~11.dll|libaccess_output_shout_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libaccess_output_shout_plugin.dll" SelfReg="false" NextFile="libaccess_output_udp_plugin.dll"/>
+    <ROW File="libaccess_output_udp_plugin.dll" Component_="libaccess_output_udp_plugin.dll" FileName="libac~12.dll|libaccess_output_udp_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libaccess_output_udp_plugin.dll" SelfReg="false" NextFile="libaccess_realrtsp_plugin.dll"/>
+    <ROW File="libaccess_realrtsp_plugin.dll" Component_="libaccess_realrtsp_plugin.dll" FileName="libac~13.dll|libaccess_realrtsp_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libaccess_realrtsp_plugin.dll" SelfReg="false" NextFile="libaccess_smb_plugin.dll"/>
+    <ROW File="libaccess_smb_plugin.dll" Component_="libaccess_smb_plugin.dll" FileName="libac~14.dll|libaccess_smb_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libaccess_smb_plugin.dll" SelfReg="false" NextFile="libaccess_tcp_plugin.dll"/>
+    <ROW File="libaccess_tcp_plugin.dll" Component_="libaccess_tcp_plugin.dll" FileName="libac~15.dll|libaccess_tcp_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libaccess_tcp_plugin.dll" SelfReg="false" NextFile="libaccess_udp_plugin.dll"/>
+    <ROW File="libaccess_udp_plugin.dll" Component_="libaccess_udp_plugin.dll" FileName="libac~16.dll|libaccess_udp_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libaccess_udp_plugin.dll" SelfReg="false" NextFile="libadjust_plugin.dll"/>
+    <ROW File="libadjust_plugin.dll" Component_="libadjust_plugin.dll" FileName="libadj~1.dll|libadjust_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libadjust_plugin.dll" SelfReg="false" NextFile="libadpcm_plugin.dll"/>
+    <ROW File="libadpcm_plugin.dll" Component_="libadpcm_plugin.dll" FileName="libadp~1.dll|libadpcm_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libadpcm_plugin.dll" SelfReg="false" NextFile="libaes3_plugin.dll"/>
+    <ROW File="libaes3_plugin.dll" Component_="libaes3_plugin.dll" FileName="libaes~1.dll|libaes3_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libaes3_plugin.dll" SelfReg="false" NextFile="libaiff_plugin.dll"/>
+    <ROW File="libaiff_plugin.dll" Component_="libaiff_plugin.dll" FileName="libaif~1.dll|libaiff_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libaiff_plugin.dll" SelfReg="false" NextFile="libalphamask_plugin.dll"/>
+    <ROW File="libalphamask_plugin.dll" Component_="libalphamask_plugin.dll" FileName="libalp~1.dll|libalphamask_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libalphamask_plugin.dll" SelfReg="false" NextFile="libaout_directx_plugin.dll"/>
+    <ROW File="libaout_directx_plugin.dll" Component_="libaout_directx_plugin.dll" FileName="libaou~1.dll|libaout_directx_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libaout_directx_plugin.dll" SelfReg="false" NextFile="libaout_file_plugin.dll"/>
+    <ROW File="libaout_file_plugin.dll" Component_="libaout_file_plugin.dll" FileName="libaou~2.dll|libaout_file_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libaout_file_plugin.dll" SelfReg="false" NextFile="libaout_sdl_plugin.dll"/>
+    <ROW File="libaout_sdl_plugin.dll" Component_="libaout_sdl_plugin.dll" FileName="libaou~3.dll|libaout_sdl_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libaout_sdl_plugin.dll" SelfReg="false" NextFile="libaraw_plugin.dll"/>
+    <ROW File="libaraw_plugin.dll" Component_="libaraw_plugin.dll" FileName="libara~1.dll|libaraw_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libaraw_plugin.dll" SelfReg="false" NextFile="libasf_plugin.dll"/>
+    <ROW File="libasf_plugin.dll" Component_="libasf_plugin.dll" FileName="libasf~1.dll|libasf_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libasf_plugin.dll" SelfReg="false" NextFile="libatmo_plugin.dll"/>
+    <ROW File="libatmo_plugin.dll" Component_="libatmo_plugin.dll" FileName="libatm~1.dll|libatmo_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libatmo_plugin.dll" SelfReg="false" NextFile="libaudiobargraph_a_plugin.dll"/>
+    <ROW File="libau_plugin.dll" Component_="libau_plugin.dll" FileName="libau_~1.dll|libau_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libau_plugin.dll" SelfReg="false" NextFile="libavcodec_plugin.dll"/>
+    <ROW File="libaudio_format_plugin.dll" Component_="libaudio_format_plugin.dll" FileName="libaud~4.dll|libaudio_format_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libaudio_format_plugin.dll" SelfReg="false" NextFile="libau_plugin.dll"/>
+    <ROW File="libaudiobargraph_a_plugin.dll" Component_="libaudiobargraph_a_plugin.dll" FileName="libaud~1.dll|libaudiobargraph_a_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libaudiobargraph_a_plugin.dll" SelfReg="false" NextFile="libaudiobargraph_v_plugin.dll"/>
+    <ROW File="libaudiobargraph_v_plugin.dll" Component_="libaudiobargraph_v_plugin.dll" FileName="libaud~2.dll|libaudiobargraph_v_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libaudiobargraph_v_plugin.dll" SelfReg="false" NextFile="libaudioscrobbler_plugin.dll"/>
+    <ROW File="libaudioscrobbler_plugin.dll" Component_="libaudioscrobbler_plugin.dll" FileName="libaud~3.dll|libaudioscrobbler_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libaudioscrobbler_plugin.dll" SelfReg="false" NextFile="libaudio_format_plugin.dll"/>
+    <ROW File="libavcodec_plugin.dll" Component_="libavcodec_plugin.dll" FileName="libavc~1.dll|libavcodec_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libavcodec_plugin.dll" SelfReg="false" NextFile="libavi_plugin.dll"/>
+    <ROW File="libavi_plugin.dll" Component_="libavi_plugin.dll" FileName="libavi~1.dll|libavi_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libavi_plugin.dll" SelfReg="false" NextFile="libball_plugin.dll"/>
+    <ROW File="libball_plugin.dll" Component_="libball_plugin.dll" FileName="libbal~1.dll|libball_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libball_plugin.dll" SelfReg="false" NextFile="libbda_plugin.dll"/>
+    <ROW File="libbda_plugin.dll" Component_="libbda_plugin.dll" FileName="libbda~1.dll|libbda_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libbda_plugin.dll" SelfReg="false" NextFile="libblendbench_plugin.dll"/>
+    <ROW File="libblend_plugin.dll" Component_="libblend_plugin.dll" FileName="libble~2.dll|libblend_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libblend_plugin.dll" SelfReg="false" NextFile="libbluescreen_plugin.dll"/>
+    <ROW File="libblendbench_plugin.dll" Component_="libblendbench_plugin.dll" FileName="libble~1.dll|libblendbench_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libblendbench_plugin.dll" SelfReg="false" NextFile="libblend_plugin.dll"/>
+    <ROW File="libbluescreen_plugin.dll" Component_="libbluescreen_plugin.dll" FileName="libblu~1.dll|libbluescreen_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libbluescreen_plugin.dll" SelfReg="false" NextFile="libcaca_plugin.dll"/>
+    <ROW File="libcaca_plugin.dll" Component_="libcaca_plugin.dll" FileName="libcac~1.dll|libcaca_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libcaca_plugin.dll" SelfReg="false" NextFile="libcanvas_plugin.dll"/>
+    <ROW File="libcanvas_plugin.dll" Component_="libcanvas_plugin.dll" FileName="libcan~1.dll|libcanvas_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libcanvas_plugin.dll" SelfReg="false" NextFile="libcc_plugin.dll"/>
+    <ROW File="libcc_plugin.dll" Component_="libcc_plugin.dll" FileName="libcc_~1.dll|libcc_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libcc_plugin.dll" SelfReg="false" NextFile="libcdda_plugin.dll"/>
+    <ROW File="libcdda_plugin.dll" Component_="libcdda_plugin.dll" FileName="libcdd~1.dll|libcdda_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libcdda_plugin.dll" SelfReg="false" NextFile="libcdg_plugin.dll"/>
+    <ROW File="libcdg_plugin.dll" Component_="libcdg_plugin.dll" FileName="libcdg~1.dll|libcdg_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libcdg_plugin.dll" SelfReg="false" NextFile="libchain_plugin.dll"/>
+    <ROW File="libchain_plugin.dll" Component_="libchain_plugin.dll" FileName="libcha~1.dll|libchain_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libchain_plugin.dll" SelfReg="false" NextFile="libchorus_flanger_plugin.dll"/>
+    <ROW File="libchorus_flanger_plugin.dll" Component_="libchorus_flanger_plugin.dll" FileName="libcho~1.dll|libchorus_flanger_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libchorus_flanger_plugin.dll" SelfReg="false" NextFile="libclone_plugin.dll"/>
+    <ROW File="libclone_plugin.dll" Component_="libclone_plugin.dll" FileName="libclo~1.dll|libclone_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libclone_plugin.dll" SelfReg="false" NextFile="libcolorthres_plugin.dll"/>
+    <ROW File="libcolorthres_plugin.dll" Component_="libcolorthres_plugin.dll" FileName="libcol~1.dll|libcolorthres_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libcolorthres_plugin.dll" SelfReg="false" NextFile="libconverter_fixed_plugin.dll"/>
+    <ROW File="libconverter_fixed_plugin.dll" Component_="libconverter_fixed_plugin.dll" FileName="libcon~1.dll|libconverter_fixed_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libconverter_fixed_plugin.dll" SelfReg="false" NextFile="libcroppadd_plugin.dll"/>
+    <ROW File="libcrop_plugin.dll" Component_="libcrop_plugin.dll" FileName="libcro~2.dll|libcrop_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libcrop_plugin.dll" SelfReg="false" NextFile="libcvdsub_plugin.dll"/>
+    <ROW File="libcroppadd_plugin.dll" Component_="libcroppadd_plugin.dll" FileName="libcro~1.dll|libcroppadd_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libcroppadd_plugin.dll" SelfReg="false" NextFile="libcrop_plugin.dll"/>
+    <ROW File="libcvdsub_plugin.dll" Component_="libcvdsub_plugin.dll" FileName="libcvd~1.dll|libcvdsub_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libcvdsub_plugin.dll" SelfReg="false" NextFile="libdeinterlace_plugin.dll"/>
+    <ROW File="libdeinterlace_plugin.dll" Component_="libdeinterlace_plugin.dll" FileName="libdei~1.dll|libdeinterlace_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libdeinterlace_plugin.dll" SelfReg="false" NextFile="libdemuxdump_plugin.dll"/>
+    <ROW File="libdemux_cdg_plugin.dll" Component_="libdemux_cdg_plugin.dll" FileName="libdem~2.dll|libdemux_cdg_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libdemux_cdg_plugin.dll" SelfReg="false" NextFile="libdirac_plugin.dll"/>
+    <ROW File="libdemuxdump_plugin.dll" Component_="libdemuxdump_plugin.dll" FileName="libdem~1.dll|libdemuxdump_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libdemuxdump_plugin.dll" SelfReg="false" NextFile="libdemux_cdg_plugin.dll"/>
+    <ROW File="libdirac_plugin.dll" Component_="libdirac_plugin.dll" FileName="libdir~1.dll|libdirac_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libdirac_plugin.dll" SelfReg="false" NextFile="libdirect3d_plugin.dll"/>
+    <ROW File="libdirect3d_plugin.dll" Component_="libdirect3d_plugin.dll" FileName="libdir~2.dll|libdirect3d_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libdirect3d_plugin.dll" SelfReg="false" NextFile="libdirectx_plugin.dll"/>
+    <ROW File="libdirectx_plugin.dll" Component_="libdirectx_plugin.dll" FileName="libdir~3.dll|libdirectx_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libdirectx_plugin.dll" SelfReg="false" NextFile="libdmo_plugin.dll"/>
+    <ROW File="libdmo_plugin.dll" Component_="libdmo_plugin.dll" FileName="libdmo~1.dll|libdmo_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libdmo_plugin.dll" SelfReg="false" NextFile="libdolby_surround_decoder_plugin.dll"/>
+    <ROW File="libdolby_surround_decoder_plugin.dll" Component_="libdolby_surround_decoder_plugin.dll" FileName="libdol~1.dll|libdolby_surround_decoder_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libdolby_surround_decoder_plugin.dll" SelfReg="false" NextFile="libdrawable_plugin.dll"/>
+    <ROW File="libdrawable_plugin.dll" Component_="libdrawable_plugin.dll" FileName="libdra~1.dll|libdrawable_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libdrawable_plugin.dll" SelfReg="false" NextFile="libdshow_plugin.dll"/>
+    <ROW File="libdshow_plugin.dll" Component_="libdshow_plugin.dll" FileName="libdsh~1.dll|libdshow_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libdshow_plugin.dll" SelfReg="false" NextFile="libdtstofloat32_plugin.dll"/>
+    <ROW File="libdts_plugin.dll" Component_="libdts_plugin.dll" FileName="libdts~3.dll|libdts_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libdts_plugin.dll" SelfReg="false" NextFile="libdummy_plugin.dll"/>
+    <ROW File="libdtstofloat32_plugin.dll" Component_="libdtstofloat32_plugin.dll" FileName="libdts~1.dll|libdtstofloat32_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libdtstofloat32_plugin.dll" SelfReg="false" NextFile="libdtstospdif_plugin.dll"/>
+    <ROW File="libdtstospdif_plugin.dll" Component_="libdtstospdif_plugin.dll" FileName="libdts~2.dll|libdtstospdif_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libdtstospdif_plugin.dll" SelfReg="false" NextFile="libdts_plugin.dll"/>
+    <ROW File="libdummy_plugin.dll" Component_="libdummy_plugin.dll" FileName="libdum~1.dll|libdummy_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libdummy_plugin.dll" SelfReg="false" NextFile="libdvbsub_plugin.dll"/>
+    <ROW File="libdvbsub_plugin.dll" Component_="libdvbsub_plugin.dll" FileName="libdvb~1.dll|libdvbsub_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libdvbsub_plugin.dll" SelfReg="false" NextFile="libdvdnav_plugin.dll"/>
+    <ROW File="libdvdnav_plugin.dll" Component_="libdvdnav_plugin.dll" FileName="libdvd~1.dll|libdvdnav_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libdvdnav_plugin.dll" SelfReg="false" NextFile="libdvdread_plugin.dll"/>
+    <ROW File="libdvdread_plugin.dll" Component_="libdvdread_plugin.dll" FileName="libdvd~2.dll|libdvdread_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libdvdread_plugin.dll" SelfReg="false" NextFile="libequalizer_plugin.dll"/>
+    <ROW File="libequalizer_plugin.dll" Component_="libequalizer_plugin.dll" FileName="libequ~1.dll|libequalizer_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libequalizer_plugin.dll" SelfReg="false" NextFile="liberase_plugin.dll"/>
+    <ROW File="liberase_plugin.dll" Component_="liberase_plugin.dll" FileName="libera~1.dll|liberase_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\liberase_plugin.dll" SelfReg="false" NextFile="libes_plugin.dll"/>
+    <ROW File="libes_plugin.dll" Component_="libes_plugin.dll" FileName="libes_~1.dll|libes_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libes_plugin.dll" SelfReg="false" NextFile="libexport_plugin.dll"/>
+    <ROW File="libexport_plugin.dll" Component_="libexport_plugin.dll" FileName="libexp~1.dll|libexport_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libexport_plugin.dll" SelfReg="false" NextFile="libextract_plugin.dll"/>
+    <ROW File="libextract_plugin.dll" Component_="libextract_plugin.dll" FileName="libext~1.dll|libextract_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libextract_plugin.dll" SelfReg="false" NextFile="libfaad_plugin.dll"/>
+    <ROW File="libfaad_plugin.dll" Component_="libfaad_plugin.dll" FileName="libfaa~1.dll|libfaad_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libfaad_plugin.dll" SelfReg="false" NextFile="libfake_plugin.dll"/>
+    <ROW File="libfake_plugin.dll" Component_="libfake_plugin.dll" FileName="libfak~1.dll|libfake_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libfake_plugin.dll" SelfReg="false" NextFile="libfilesystem_plugin.dll"/>
+    <ROW File="libfilesystem_plugin.dll" Component_="libfilesystem_plugin.dll" FileName="libfil~1.dll|libfilesystem_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libfilesystem_plugin.dll" SelfReg="false" NextFile="libflacsys_plugin.dll"/>
+    <ROW File="libflac_plugin.dll" Component_="libflac_plugin.dll" FileName="libfla~2.dll|libflac_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libflac_plugin.dll" SelfReg="false" NextFile="libfloat32_mixer_plugin.dll"/>
+    <ROW File="libflacsys_plugin.dll" Component_="libflacsys_plugin.dll" FileName="libfla~1.dll|libflacsys_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libflacsys_plugin.dll" SelfReg="false" NextFile="libflac_plugin.dll"/>
+    <ROW File="libfloat32_mixer_plugin.dll" Component_="libfloat32_mixer_plugin.dll" FileName="libflo~1.dll|libfloat32_mixer_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libfloat32_mixer_plugin.dll" SelfReg="false" NextFile="libfluidsynth_plugin.dll"/>
+    <ROW File="libfluidsynth_plugin.dll" Component_="libfluidsynth_plugin.dll" FileName="libflu~1.dll|libfluidsynth_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libfluidsynth_plugin.dll" SelfReg="false" NextFile="libfolder_plugin.dll"/>
+    <ROW File="libfolder_plugin.dll" Component_="libfolder_plugin.dll" FileName="libfol~1.dll|libfolder_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libfolder_plugin.dll" SelfReg="false" NextFile="libfreetype_plugin.dll"/>
+    <ROW File="libfreetype_plugin.dll" Component_="libfreetype_plugin.dll" FileName="libfre~1.dll|libfreetype_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libfreetype_plugin.dll" SelfReg="false" NextFile="libgaussianblur_plugin.dll"/>
+    <ROW File="libgaussianblur_plugin.dll" Component_="libgaussianblur_plugin.dll" FileName="libgau~1.dll|libgaussianblur_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libgaussianblur_plugin.dll" SelfReg="false" NextFile="libgestures_plugin.dll"/>
+    <ROW File="libgestures_plugin.dll" Component_="libgestures_plugin.dll" FileName="libges~1.dll|libgestures_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libgestures_plugin.dll" SelfReg="false" NextFile="libglobalhotkeys_plugin.dll"/>
+    <ROW File="libglobalhotkeys_plugin.dll" Component_="libglobalhotkeys_plugin.dll" FileName="libglo~1.dll|libglobalhotkeys_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libglobalhotkeys_plugin.dll" SelfReg="false" NextFile="libglwin32_plugin.dll"/>
+    <ROW File="libglwin32_plugin.dll" Component_="libglwin32_plugin.dll" FileName="libglw~1.dll|libglwin32_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libglwin32_plugin.dll" SelfReg="false" NextFile="libgme_plugin.dll"/>
+    <ROW File="libgme_plugin.dll" Component_="libgme_plugin.dll" FileName="libgme~1.dll|libgme_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libgme_plugin.dll" SelfReg="false" NextFile="libgnutls_plugin.dll"/>
+    <ROW File="libgnutls_plugin.dll" Component_="libgnutls_plugin.dll" FileName="libgnu~1.dll|libgnutls_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libgnutls_plugin.dll" SelfReg="false" NextFile="libgoom_plugin.dll"/>
+    <ROW File="libgoom_plugin.dll" Component_="libgoom_plugin.dll" FileName="libgoo~1.dll|libgoom_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libgoom_plugin.dll" SelfReg="false" NextFile="libgradient_plugin.dll"/>
+    <ROW File="libgradient_plugin.dll" Component_="libgradient_plugin.dll" FileName="libgra~1.dll|libgradient_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libgradient_plugin.dll" SelfReg="false" NextFile="libgrain_plugin.dll"/>
+    <ROW File="libgrain_plugin.dll" Component_="libgrain_plugin.dll" FileName="libgra~2.dll|libgrain_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libgrain_plugin.dll" SelfReg="false" NextFile="libgrey_yuv_plugin.dll"/>
+    <ROW File="libgrey_yuv_plugin.dll" Component_="libgrey_yuv_plugin.dll" FileName="libgre~1.dll|libgrey_yuv_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libgrey_yuv_plugin.dll" SelfReg="false" NextFile="libh264_plugin.dll"/>
+    <ROW File="libh264_plugin.dll" Component_="libh264_plugin.dll" FileName="libh26~1.dll|libh264_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libh264_plugin.dll" SelfReg="false" NextFile="libheadphone_channel_mixer_plugin.dll"/>
+    <ROW File="libheadphone_channel_mixer_plugin.dll" Component_="libheadphone_channel_mixer_plugin.dll" FileName="libhea~1.dll|libheadphone_channel_mixer_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libheadphone_channel_mixer_plugin.dll" SelfReg="false" NextFile="libhotkeys_plugin.dll"/>
+    <ROW File="libhotkeys_plugin.dll" Component_="libhotkeys_plugin.dll" FileName="libhot~1.dll|libhotkeys_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libhotkeys_plugin.dll" SelfReg="false" NextFile="libi420_rgb_mmx_plugin.dll"/>
+    <ROW File="libi420_rgb_mmx_plugin.dll" Component_="libi420_rgb_mmx_plugin.dll" FileName="libi42~1.dll|libi420_rgb_mmx_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libi420_rgb_mmx_plugin.dll" SelfReg="false" NextFile="libi420_rgb_plugin.dll"/>
+    <ROW File="libi420_rgb_plugin.dll" Component_="libi420_rgb_plugin.dll" FileName="libi42~2.dll|libi420_rgb_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libi420_rgb_plugin.dll" SelfReg="false" NextFile="libi420_rgb_sse2_plugin.dll"/>
+    <ROW File="libi420_rgb_sse2_plugin.dll" Component_="libi420_rgb_sse2_plugin.dll" FileName="libi42~3.dll|libi420_rgb_sse2_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libi420_rgb_sse2_plugin.dll" SelfReg="false" NextFile="libi420_yuy2_mmx_plugin.dll"/>
+    <ROW File="libi420_yuy2_mmx_plugin.dll" Component_="libi420_yuy2_mmx_plugin.dll" FileName="libi42~4.dll|libi420_yuy2_mmx_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libi420_yuy2_mmx_plugin.dll" SelfReg="false" NextFile="libi420_yuy2_plugin.dll"/>
+    <ROW File="libi420_yuy2_plugin.dll" Component_="libi420_yuy2_plugin.dll" FileName="libi42~5.dll|libi420_yuy2_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libi420_yuy2_plugin.dll" SelfReg="false" NextFile="libi420_yuy2_sse2_plugin.dll"/>
+    <ROW File="libi420_yuy2_sse2_plugin.dll" Component_="libi420_yuy2_sse2_plugin.dll" FileName="libi42~6.dll|libi420_yuy2_sse2_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libi420_yuy2_sse2_plugin.dll" SelfReg="false" NextFile="libi422_i420_plugin.dll"/>
+    <ROW File="libi422_i420_plugin.dll" Component_="libi422_i420_plugin.dll" FileName="libi42~7.dll|libi422_i420_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libi422_i420_plugin.dll" SelfReg="false" NextFile="libi422_yuy2_mmx_plugin.dll"/>
+    <ROW File="libi422_yuy2_mmx_plugin.dll" Component_="libi422_yuy2_mmx_plugin.dll" FileName="libi42~8.dll|libi422_yuy2_mmx_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libi422_yuy2_mmx_plugin.dll" SelfReg="false" NextFile="libi422_yuy2_plugin.dll"/>
+    <ROW File="libi422_yuy2_plugin.dll" Component_="libi422_yuy2_plugin.dll" FileName="libi42~9.dll|libi422_yuy2_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libi422_yuy2_plugin.dll" SelfReg="false" NextFile="libi422_yuy2_sse2_plugin.dll"/>
+    <ROW File="libi422_yuy2_sse2_plugin.dll" Component_="libi422_yuy2_sse2_plugin.dll" FileName="libi4~10.dll|libi422_yuy2_sse2_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libi422_yuy2_sse2_plugin.dll" SelfReg="false" NextFile="libinvert_plugin.dll"/>
+    <ROW File="libinvert_plugin.dll" Component_="libinvert_plugin.dll" FileName="libinv~1.dll|libinvert_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libinvert_plugin.dll" SelfReg="false" NextFile="libinvmem_plugin.dll"/>
+    <ROW File="libinvmem_plugin.dll" Component_="libinvmem_plugin.dll" FileName="libinv~2.dll|libinvmem_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libinvmem_plugin.dll" SelfReg="false" NextFile="libkate_plugin.dll"/>
+    <ROW File="libkate_plugin.dll" Component_="libkate_plugin.dll" FileName="libkat~1.dll|libkate_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libkate_plugin.dll" SelfReg="false" NextFile="liblibass_plugin.dll"/>
+    <ROW File="liblibass_plugin.dll" Component_="liblibass_plugin.dll" FileName="liblib~1.dll|liblibass_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\liblibass_plugin.dll" SelfReg="false" NextFile="liblibmpeg2_plugin.dll"/>
+    <ROW File="liblibmpeg2_plugin.dll" Component_="liblibmpeg2_plugin.dll" FileName="liblib~2.dll|liblibmpeg2_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\liblibmpeg2_plugin.dll" SelfReg="false" NextFile="liblive555_plugin.dll"/>
+    <ROW File="liblive555_plugin.dll" Component_="liblive555_plugin.dll" FileName="libliv~1.dll|liblive555_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\liblive555_plugin.dll" SelfReg="false" NextFile="liblogger_plugin.dll"/>
+    <ROW File="liblogger_plugin.dll" Component_="liblogger_plugin.dll" FileName="liblog~1.dll|liblogger_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\liblogger_plugin.dll" SelfReg="false" NextFile="liblogo_plugin.dll"/>
+    <ROW File="liblogo_plugin.dll" Component_="liblogo_plugin.dll" FileName="liblog~2.dll|liblogo_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\liblogo_plugin.dll" SelfReg="false" NextFile="liblpcm_plugin.dll"/>
+    <ROW File="liblpcm_plugin.dll" Component_="liblpcm_plugin.dll" FileName="liblpc~1.dll|liblpcm_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\liblpcm_plugin.dll" SelfReg="false" NextFile="liblua_plugin.dll"/>
+    <ROW File="liblua_plugin.dll" Component_="liblua_plugin.dll" FileName="liblua~1.dll|liblua_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\liblua_plugin.dll" SelfReg="false" NextFile="libmagnify_plugin.dll"/>
+    <ROW File="libmagnify_plugin.dll" Component_="libmagnify_plugin.dll" FileName="libmag~1.dll|libmagnify_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libmagnify_plugin.dll" SelfReg="false" NextFile="libmarq_plugin.dll"/>
+    <ROW File="libmarq_plugin.dll" Component_="libmarq_plugin.dll" FileName="libmar~1.dll|libmarq_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libmarq_plugin.dll" SelfReg="false" NextFile="libmediadirs_plugin.dll"/>
+    <ROW File="libmediadirs_plugin.dll" Component_="libmediadirs_plugin.dll" FileName="libmed~1.dll|libmediadirs_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libmediadirs_plugin.dll" SelfReg="false" NextFile="libmemcpy3dn_plugin.dll"/>
+    <ROW File="libmemcpy3dn_plugin.dll" Component_="libmemcpy3dn_plugin.dll" FileName="libmem~1.dll|libmemcpy3dn_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libmemcpy3dn_plugin.dll" SelfReg="false" NextFile="libmemcpymmxext_plugin.dll"/>
+    <ROW File="libmemcpymmx_plugin.dll" Component_="libmemcpymmx_plugin.dll" FileName="libmem~3.dll|libmemcpymmx_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libmemcpymmx_plugin.dll" SelfReg="false" NextFile="libmirror_plugin.dll"/>
+    <ROW File="libmemcpymmxext_plugin.dll" Component_="libmemcpymmxext_plugin.dll" FileName="libmem~2.dll|libmemcpymmxext_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libmemcpymmxext_plugin.dll" SelfReg="false" NextFile="libmemcpymmx_plugin.dll"/>
+    <ROW File="libmirror_plugin.dll" Component_="libmirror_plugin.dll" FileName="libmir~1.dll|libmirror_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libmirror_plugin.dll" SelfReg="false" NextFile="libmjpeg_plugin.dll"/>
+    <ROW File="libmjpeg_plugin.dll" Component_="libmjpeg_plugin.dll" FileName="libmjp~1.dll|libmjpeg_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libmjpeg_plugin.dll" SelfReg="false" NextFile="libmkv_plugin.dll"/>
+    <ROW File="libmkv_plugin.dll" Component_="libmkv_plugin.dll" FileName="libmkv~1.dll|libmkv_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libmkv_plugin.dll" SelfReg="false" NextFile="libmod_plugin.dll"/>
+    <ROW File="libmod_plugin.dll" Component_="libmod_plugin.dll" FileName="libmod~1.dll|libmod_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libmod_plugin.dll" SelfReg="false" NextFile="libmono_plugin.dll"/>
+    <ROW File="libmono_plugin.dll" Component_="libmono_plugin.dll" FileName="libmon~1.dll|libmono_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libmono_plugin.dll" SelfReg="false" NextFile="libmosaic_plugin.dll"/>
+    <ROW File="libmosaic_plugin.dll" Component_="libmosaic_plugin.dll" FileName="libmos~1.dll|libmosaic_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libmosaic_plugin.dll" SelfReg="false" NextFile="libmotionblur_plugin.dll"/>
+    <ROW File="libmotionblur_plugin.dll" Component_="libmotionblur_plugin.dll" FileName="libmot~1.dll|libmotionblur_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libmotionblur_plugin.dll" SelfReg="false" NextFile="libmotiondetect_plugin.dll"/>
+    <ROW File="libmotiondetect_plugin.dll" Component_="libmotiondetect_plugin.dll" FileName="libmot~2.dll|libmotiondetect_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libmotiondetect_plugin.dll" SelfReg="false" NextFile="libmp4_plugin.dll"/>
+    <ROW File="libmp4_plugin.dll" Component_="libmp4_plugin.dll" FileName="libmp4~1.dll|libmp4_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libmp4_plugin.dll" SelfReg="false" NextFile="libmpc_plugin.dll"/>
+    <ROW File="libmpc_plugin.dll" Component_="libmpc_plugin.dll" FileName="libmpc~1.dll|libmpc_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libmpc_plugin.dll" SelfReg="false" NextFile="libmpeg_audio_plugin.dll"/>
+    <ROW File="libmpeg_audio_plugin.dll" Component_="libmpeg_audio_plugin.dll" FileName="libmpe~1.dll|libmpeg_audio_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libmpeg_audio_plugin.dll" SelfReg="false" NextFile="libmpgatofixed32_plugin.dll"/>
+    <ROW File="libmpgatofixed32_plugin.dll" Component_="libmpgatofixed32_plugin.dll" FileName="libmpg~1.dll|libmpgatofixed32_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libmpgatofixed32_plugin.dll" SelfReg="false" NextFile="libmpgv_plugin.dll"/>
+    <ROW File="libmpgv_plugin.dll" Component_="libmpgv_plugin.dll" FileName="libmpg~2.dll|libmpgv_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libmpgv_plugin.dll" SelfReg="false" NextFile="libmsn_plugin.dll"/>
+    <ROW File="libmsn_plugin.dll" Component_="libmsn_plugin.dll" FileName="libmsn~1.dll|libmsn_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libmsn_plugin.dll" SelfReg="false" NextFile="libmux_asf_plugin.dll"/>
+    <ROW File="libmux_asf_plugin.dll" Component_="libmux_asf_plugin.dll" FileName="libmux~1.dll|libmux_asf_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libmux_asf_plugin.dll" SelfReg="false" NextFile="libmux_avi_plugin.dll"/>
+    <ROW File="libmux_avi_plugin.dll" Component_="libmux_avi_plugin.dll" FileName="libmux~2.dll|libmux_avi_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libmux_avi_plugin.dll" SelfReg="false" NextFile="libmux_dummy_plugin.dll"/>
+    <ROW File="libmux_dummy_plugin.dll" Component_="libmux_dummy_plugin.dll" FileName="libmux~3.dll|libmux_dummy_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libmux_dummy_plugin.dll" SelfReg="false" NextFile="libmux_mp4_plugin.dll"/>
+    <ROW File="libmux_mp4_plugin.dll" Component_="libmux_mp4_plugin.dll" FileName="libmux~4.dll|libmux_mp4_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libmux_mp4_plugin.dll" SelfReg="false" NextFile="libmux_mpjpeg_plugin.dll"/>
+    <ROW File="libmux_mpjpeg_plugin.dll" Component_="libmux_mpjpeg_plugin.dll" FileName="libmux~5.dll|libmux_mpjpeg_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libmux_mpjpeg_plugin.dll" SelfReg="false" NextFile="libmux_ogg_plugin.dll"/>
+    <ROW File="libmux_ogg_plugin.dll" Component_="libmux_ogg_plugin.dll" FileName="libmux~6.dll|libmux_ogg_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libmux_ogg_plugin.dll" SelfReg="false" NextFile="libmux_ps_plugin.dll"/>
+    <ROW File="libmux_ps_plugin.dll" Component_="libmux_ps_plugin.dll" FileName="libmux~7.dll|libmux_ps_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libmux_ps_plugin.dll" SelfReg="false" NextFile="libmux_ts_plugin.dll"/>
+    <ROW File="libmux_ts_plugin.dll" Component_="libmux_ts_plugin.dll" FileName="libmux~8.dll|libmux_ts_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libmux_ts_plugin.dll" SelfReg="false" NextFile="libmux_wav_plugin.dll"/>
+    <ROW File="libmux_wav_plugin.dll" Component_="libmux_wav_plugin.dll" FileName="libmux~9.dll|libmux_wav_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libmux_wav_plugin.dll" SelfReg="false" NextFile="libnetsync_plugin.dll"/>
+    <ROW File="libnetsync_plugin.dll" Component_="libnetsync_plugin.dll" FileName="libnet~1.dll|libnetsync_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libnetsync_plugin.dll" SelfReg="false" NextFile="libnoise_plugin.dll"/>
+    <ROW File="libnoise_plugin.dll" Component_="libnoise_plugin.dll" FileName="libnoi~1.dll|libnoise_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libnoise_plugin.dll" SelfReg="false" NextFile="libnormvol_plugin.dll"/>
+    <ROW File="libnormvol_plugin.dll" Component_="libnormvol_plugin.dll" FileName="libnor~1.dll|libnormvol_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libnormvol_plugin.dll" SelfReg="false" NextFile="libnsc_plugin.dll"/>
+    <ROW File="libnsc_plugin.dll" Component_="libnsc_plugin.dll" FileName="libnsc~1.dll|libnsc_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libnsc_plugin.dll" SelfReg="false" NextFile="libnsv_plugin.dll"/>
+    <ROW File="libnsv_plugin.dll" Component_="libnsv_plugin.dll" FileName="libnsv~1.dll|libnsv_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libnsv_plugin.dll" SelfReg="false" NextFile="libntservice_plugin.dll"/>
+    <ROW File="libntservice_plugin.dll" Component_="libntservice_plugin.dll" FileName="libnts~1.dll|libntservice_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libntservice_plugin.dll" SelfReg="false" NextFile="libnuv_plugin.dll"/>
+    <ROW File="libnuv_plugin.dll" Component_="libnuv_plugin.dll" FileName="libnuv~1.dll|libnuv_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libnuv_plugin.dll" SelfReg="false" NextFile="libogg_plugin.dll"/>
+    <ROW File="libogg_plugin.dll" Component_="libogg_plugin.dll" FileName="libogg~1.dll|libogg_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libogg_plugin.dll" SelfReg="false" NextFile="liboldhttp_plugin.dll"/>
+    <ROW File="liboldhttp_plugin.dll" Component_="liboldhttp_plugin.dll" FileName="libold~1.dll|liboldhttp_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\liboldhttp_plugin.dll" SelfReg="false" NextFile="liboldrc_plugin.dll"/>
+    <ROW File="liboldrc_plugin.dll" Component_="liboldrc_plugin.dll" FileName="libold~2.dll|liboldrc_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\liboldrc_plugin.dll" SelfReg="false" NextFile="liboldtelnet_plugin.dll"/>
+    <ROW File="liboldtelnet_plugin.dll" Component_="liboldtelnet_plugin.dll" FileName="libold~3.dll|liboldtelnet_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\liboldtelnet_plugin.dll" SelfReg="false" NextFile="libosdmenu_plugin.dll"/>
+    <ROW File="libosd_parser_plugin.dll" Component_="libosd_parser_plugin.dll" FileName="libosd~2.dll|libosd_parser_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libosd_parser_plugin.dll" SelfReg="false" NextFile="libpacketizer_copy_plugin.dll"/>
+    <ROW File="libosdmenu_plugin.dll" Component_="libosdmenu_plugin.dll" FileName="libosd~1.dll|libosdmenu_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libosdmenu_plugin.dll" SelfReg="false" NextFile="libosd_parser_plugin.dll"/>
+    <ROW File="libpacketizer_copy_plugin.dll" Component_="libpacketizer_copy_plugin.dll" FileName="libpac~1.dll|libpacketizer_copy_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libpacketizer_copy_plugin.dll" SelfReg="false" NextFile="libpacketizer_dirac_plugin.dll"/>
+    <ROW File="libpacketizer_dirac_plugin.dll" Component_="libpacketizer_dirac_plugin.dll" FileName="libpac~2.dll|libpacketizer_dirac_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libpacketizer_dirac_plugin.dll" SelfReg="false" NextFile="libpacketizer_flac_plugin.dll"/>
+    <ROW File="libpacketizer_flac_plugin.dll" Component_="libpacketizer_flac_plugin.dll" FileName="libpac~3.dll|libpacketizer_flac_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libpacketizer_flac_plugin.dll" SelfReg="false" NextFile="libpacketizer_h264_plugin.dll"/>
+    <ROW File="libpacketizer_h264_plugin.dll" Component_="libpacketizer_h264_plugin.dll" FileName="libpac~4.dll|libpacketizer_h264_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libpacketizer_h264_plugin.dll" SelfReg="false" NextFile="libpacketizer_mlp_plugin.dll"/>
+    <ROW File="libpacketizer_mlp_plugin.dll" Component_="libpacketizer_mlp_plugin.dll" FileName="libpac~5.dll|libpacketizer_mlp_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libpacketizer_mlp_plugin.dll" SelfReg="false" NextFile="libpacketizer_mpeg4audio_plugin.dll"/>
+    <ROW File="libpacketizer_mpeg4audio_plugin.dll" Component_="libpacketizer_mpeg4audio_plugin.dll" FileName="libpac~6.dll|libpacketizer_mpeg4audio_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libpacketizer_mpeg4audio_plugin.dll" SelfReg="false" NextFile="libpacketizer_mpeg4video_plugin.dll"/>
+    <ROW File="libpacketizer_mpeg4video_plugin.dll" Component_="libpacketizer_mpeg4video_plugin.dll" FileName="libpac~7.dll|libpacketizer_mpeg4video_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libpacketizer_mpeg4video_plugin.dll" SelfReg="false" NextFile="libpacketizer_mpegvideo_plugin.dll"/>
+    <ROW File="libpacketizer_mpegvideo_plugin.dll" Component_="libpacketizer_mpegvideo_plugin.dll" FileName="libpac~8.dll|libpacketizer_mpegvideo_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libpacketizer_mpegvideo_plugin.dll" SelfReg="false" NextFile="libpacketizer_vc1_plugin.dll"/>
+    <ROW File="libpacketizer_vc1_plugin.dll" Component_="libpacketizer_vc1_plugin.dll" FileName="libpac~9.dll|libpacketizer_vc1_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libpacketizer_vc1_plugin.dll" SelfReg="false" NextFile="libpanoramix_plugin.dll"/>
+    <ROW File="libpanoramix_plugin.dll" Component_="libpanoramix_plugin.dll" FileName="libpan~1.dll|libpanoramix_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libpanoramix_plugin.dll" SelfReg="false" NextFile="libparam_eq_plugin.dll"/>
+    <ROW File="libparam_eq_plugin.dll" Component_="libparam_eq_plugin.dll" FileName="libpar~1.dll|libparam_eq_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libparam_eq_plugin.dll" SelfReg="false" NextFile="libplaylist_plugin.dll"/>
+    <ROW File="libplaylist_plugin.dll" Component_="libplaylist_plugin.dll" FileName="libpla~1.dll|libplaylist_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libplaylist_plugin.dll" SelfReg="false" NextFile="libpng_plugin.dll"/>
+    <ROW File="libpng_plugin.dll" Component_="libpng_plugin.dll" FileName="libpng~1.dll|libpng_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libpng_plugin.dll" SelfReg="false" NextFile="libpodcast_plugin.dll"/>
+    <ROW File="libpodcast_plugin.dll" Component_="libpodcast_plugin.dll" FileName="libpod~1.dll|libpodcast_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libpodcast_plugin.dll" SelfReg="false" NextFile="libportaudio_plugin.dll"/>
+    <ROW File="libportaudio_plugin.dll" Component_="libportaudio_plugin.dll" FileName="libpor~1.dll|libportaudio_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libportaudio_plugin.dll" SelfReg="false" NextFile="libpostproc_plugin.dll"/>
+    <ROW File="libpostproc_plugin.dll" Component_="libpostproc_plugin.dll" FileName="libpos~1.dll|libpostproc_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libpostproc_plugin.dll" SelfReg="false" NextFile="libprojectm_plugin.dll"/>
+    <ROW File="libprojectm_plugin.dll" Component_="libprojectm_plugin.dll" FileName="libpro~1.dll|libprojectm_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libprojectm_plugin.dll" SelfReg="false" NextFile="libpsychedelic_plugin.dll"/>
+    <ROW File="libps_plugin.dll" Component_="libps_plugin.dll" FileName="libps_~1.dll|libps_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libps_plugin.dll" SelfReg="false" NextFile="libpuzzle_plugin.dll"/>
+    <ROW File="libpsychedelic_plugin.dll" Component_="libpsychedelic_plugin.dll" FileName="libpsy~1.dll|libpsychedelic_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libpsychedelic_plugin.dll" SelfReg="false" NextFile="libps_plugin.dll"/>
+    <ROW File="libpuzzle_plugin.dll" Component_="libpuzzle_plugin.dll" FileName="libpuz~1.dll|libpuzzle_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libpuzzle_plugin.dll" SelfReg="false" NextFile="libpva_plugin.dll"/>
+    <ROW File="libpva_plugin.dll" Component_="libpva_plugin.dll" FileName="libpva~1.dll|libpva_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libpva_plugin.dll" SelfReg="false" NextFile="libquicktime_plugin.dll"/>
+    <ROW File="libquicktime_plugin.dll" Component_="libquicktime_plugin.dll" FileName="libqui~1.dll|libquicktime_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libquicktime_plugin.dll" SelfReg="false" NextFile="librawaud_plugin.dll"/>
+    <ROW File="librawaud_plugin.dll" Component_="librawaud_plugin.dll" FileName="libraw~1.dll|librawaud_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\librawaud_plugin.dll" SelfReg="false" NextFile="librawdv_plugin.dll"/>
+    <ROW File="librawdv_plugin.dll" Component_="librawdv_plugin.dll" FileName="libraw~2.dll|librawdv_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\librawdv_plugin.dll" SelfReg="false" NextFile="librawvideo_plugin.dll"/>
+    <ROW File="librawvid_plugin.dll" Component_="librawvid_plugin.dll" FileName="libraw~4.dll|librawvid_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\librawvid_plugin.dll" SelfReg="false" NextFile="librealvideo_plugin.dll"/>
+    <ROW File="librawvideo_plugin.dll" Component_="librawvideo_plugin.dll" FileName="libraw~3.dll|librawvideo_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\librawvideo_plugin.dll" SelfReg="false" NextFile="librawvid_plugin.dll"/>
+    <ROW File="libreal_plugin.dll" Component_="libreal_plugin.dll" FileName="librea~2.dll|libreal_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libreal_plugin.dll" SelfReg="false" NextFile="libremoteosd_plugin.dll"/>
+    <ROW File="librealvideo_plugin.dll" Component_="librealvideo_plugin.dll" FileName="librea~1.dll|librealvideo_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\librealvideo_plugin.dll" SelfReg="false" NextFile="libreal_plugin.dll"/>
+    <ROW File="libremoteosd_plugin.dll" Component_="libremoteosd_plugin.dll" FileName="librem~1.dll|libremoteosd_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libremoteosd_plugin.dll" SelfReg="false" NextFile="libripple_plugin.dll"/>
+    <ROW File="libripple_plugin.dll" Component_="libripple_plugin.dll" FileName="librip~1.dll|libripple_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libripple_plugin.dll" SelfReg="false" NextFile="librotate_plugin.dll"/>
+    <ROW File="librotate_plugin.dll" Component_="librotate_plugin.dll" FileName="librot~1.dll|librotate_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\librotate_plugin.dll" SelfReg="false" NextFile="librss_plugin.dll"/>
+    <ROW File="librss_plugin.dll" Component_="librss_plugin.dll" FileName="librss~1.dll|librss_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\librss_plugin.dll" SelfReg="false" NextFile="librtp_plugin.dll"/>
+    <ROW File="librtp_plugin.dll" Component_="librtp_plugin.dll" FileName="librtp~1.dll|librtp_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\librtp_plugin.dll" SelfReg="false" NextFile="librv32_plugin.dll"/>
+    <ROW File="librv32_plugin.dll" Component_="librv32_plugin.dll" FileName="librv3~1.dll|librv32_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\librv32_plugin.dll" SelfReg="false" NextFile="libsap_plugin.dll"/>
+    <ROW File="libsap_plugin.dll" Component_="libsap_plugin.dll" FileName="libsap~1.dll|libsap_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libsap_plugin.dll" SelfReg="false" NextFile="libscaletempo_plugin.dll"/>
+    <ROW File="libscale_plugin.dll" Component_="libscale_plugin.dll" FileName="libsca~2.dll|libscale_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libscale_plugin.dll" SelfReg="false" NextFile="libscene_plugin.dll"/>
+    <ROW File="libscaletempo_plugin.dll" Component_="libscaletempo_plugin.dll" FileName="libsca~1.dll|libscaletempo_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libscaletempo_plugin.dll" SelfReg="false" NextFile="libscale_plugin.dll"/>
+    <ROW File="libscene_plugin.dll" Component_="libscene_plugin.dll" FileName="libsce~1.dll|libscene_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libscene_plugin.dll" SelfReg="false" NextFile="libschroedinger_plugin.dll"/>
+    <ROW File="libschroedinger_plugin.dll" Component_="libschroedinger_plugin.dll" FileName="libsch~1.dll|libschroedinger_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libschroedinger_plugin.dll" SelfReg="false" NextFile="libscreen_plugin.dll"/>
+    <ROW File="libscreen_plugin.dll" Component_="libscreen_plugin.dll" FileName="libscr~1.dll|libscreen_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libscreen_plugin.dll" SelfReg="false" NextFile="libsdl_image_plugin.dll"/>
+    <ROW File="libsdl_image_plugin.dll" Component_="libsdl_image_plugin.dll" FileName="libsdl~1.dll|libsdl_image_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libsdl_image_plugin.dll" SelfReg="false" NextFile="libsharpen_plugin.dll"/>
+    <ROW File="libsharpen_plugin.dll" Component_="libsharpen_plugin.dll" FileName="libsha~1.dll|libsharpen_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libsharpen_plugin.dll" SelfReg="false" NextFile="libsimple_channel_mixer_plugin.dll"/>
+    <ROW File="libsimple_channel_mixer_plugin.dll" Component_="libsimple_channel_mixer_plugin.dll" FileName="libsim~1.dll|libsimple_channel_mixer_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libsimple_channel_mixer_plugin.dll" SelfReg="false" NextFile="libsmf_plugin.dll"/>
+    <ROW File="libsmf_plugin.dll" Component_="libsmf_plugin.dll" FileName="libsmf~1.dll|libsmf_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libsmf_plugin.dll" SelfReg="false" NextFile="libspatializer_plugin.dll"/>
+    <ROW File="libspatializer_plugin.dll" Component_="libspatializer_plugin.dll" FileName="libspa~1.dll|libspatializer_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libspatializer_plugin.dll" SelfReg="false" NextFile="libspdif_mixer_plugin.dll"/>
+    <ROW File="libspdif_mixer_plugin.dll" Component_="libspdif_mixer_plugin.dll" FileName="libspd~1.dll|libspdif_mixer_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libspdif_mixer_plugin.dll" SelfReg="false" NextFile="libspeex_plugin.dll"/>
+    <ROW File="libspeex_plugin.dll" Component_="libspeex_plugin.dll" FileName="libspe~1.dll|libspeex_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libspeex_plugin.dll" SelfReg="false" NextFile="libspudec_plugin.dll"/>
+    <ROW File="libspudec_plugin.dll" Component_="libspudec_plugin.dll" FileName="libspu~1.dll|libspudec_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libspudec_plugin.dll" SelfReg="false" NextFile="libstats_plugin.dll"/>
+    <ROW File="libstats_plugin.dll" Component_="libstats_plugin.dll" FileName="libsta~1.dll|libstats_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libstats_plugin.dll" SelfReg="false" NextFile="libstream_filter_rar_plugin.dll"/>
+    <ROW File="libstream_filter_rar_plugin.dll" Component_="libstream_filter_rar_plugin.dll" FileName="libstr~1.dll|libstream_filter_rar_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libstream_filter_rar_plugin.dll" SelfReg="false" NextFile="libstream_filter_record_plugin.dll"/>
+    <ROW File="libstream_filter_record_plugin.dll" Component_="libstream_filter_record_plugin.dll" FileName="libstr~2.dll|libstream_filter_record_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libstream_filter_record_plugin.dll" SelfReg="false" NextFile="libstream_out_autodel_plugin.dll"/>
+    <ROW File="libstream_out_autodel_plugin.dll" Component_="libstream_out_autodel_plugin.dll" FileName="libstr~3.dll|libstream_out_autodel_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libstream_out_autodel_plugin.dll" SelfReg="false" NextFile="libstream_out_bridge_plugin.dll"/>
+    <ROW File="libstream_out_bridge_plugin.dll" Component_="libstream_out_bridge_plugin.dll" FileName="libstr~4.dll|libstream_out_bridge_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libstream_out_bridge_plugin.dll" SelfReg="false" NextFile="libstream_out_description_plugin.dll"/>
+    <ROW File="libstream_out_description_plugin.dll" Component_="libstream_out_description_plugin.dll" FileName="libstr~5.dll|libstream_out_description_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libstream_out_description_plugin.dll" SelfReg="false" NextFile="libstream_out_display_plugin.dll"/>
+    <ROW File="libstream_out_display_plugin.dll" Component_="libstream_out_display_plugin.dll" FileName="libstr~6.dll|libstream_out_display_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libstream_out_display_plugin.dll" SelfReg="false" NextFile="libstream_out_dummy_plugin.dll"/>
+    <ROW File="libstream_out_dummy_plugin.dll" Component_="libstream_out_dummy_plugin.dll" FileName="libstr~7.dll|libstream_out_dummy_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libstream_out_dummy_plugin.dll" SelfReg="false" NextFile="libstream_out_duplicate_plugin.dll"/>
+    <ROW File="libstream_out_duplicate_plugin.dll" Component_="libstream_out_duplicate_plugin.dll" FileName="libstr~8.dll|libstream_out_duplicate_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libstream_out_duplicate_plugin.dll" SelfReg="false" NextFile="libstream_out_es_plugin.dll"/>
+    <ROW File="libstream_out_es_plugin.dll" Component_="libstream_out_es_plugin.dll" FileName="libstr~9.dll|libstream_out_es_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libstream_out_es_plugin.dll" SelfReg="false" NextFile="libstream_out_gather_plugin.dll"/>
+    <ROW File="libstream_out_gather_plugin.dll" Component_="libstream_out_gather_plugin.dll" FileName="libst~10.dll|libstream_out_gather_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libstream_out_gather_plugin.dll" SelfReg="false" NextFile="libstream_out_mosaic_bridge_plugin.dll"/>
+    <ROW File="libstream_out_mosaic_bridge_plugin.dll" Component_="libstream_out_mosaic_bridge_plugin.dll" FileName="libst~11.dll|libstream_out_mosaic_bridge_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libstream_out_mosaic_bridge_plugin.dll" SelfReg="false" NextFile="libstream_out_raop_plugin.dll"/>
+    <ROW File="libstream_out_raop_plugin.dll" Component_="libstream_out_raop_plugin.dll" FileName="libst~12.dll|libstream_out_raop_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libstream_out_raop_plugin.dll" SelfReg="false" NextFile="libstream_out_record_plugin.dll"/>
+    <ROW File="libstream_out_record_plugin.dll" Component_="libstream_out_record_plugin.dll" FileName="libst~13.dll|libstream_out_record_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libstream_out_record_plugin.dll" SelfReg="false" NextFile="libstream_out_rtp_plugin.dll"/>
+    <ROW File="libstream_out_rtp_plugin.dll" Component_="libstream_out_rtp_plugin.dll" FileName="libst~14.dll|libstream_out_rtp_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libstream_out_rtp_plugin.dll" SelfReg="false" NextFile="libstream_out_smem_plugin.dll"/>
+    <ROW File="libstream_out_smem_plugin.dll" Component_="libstream_out_smem_plugin.dll" FileName="libst~15.dll|libstream_out_smem_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libstream_out_smem_plugin.dll" SelfReg="false" NextFile="libstream_out_standard_plugin.dll"/>
+    <ROW File="libstream_out_standard_plugin.dll" Component_="libstream_out_standard_plugin.dll" FileName="libst~16.dll|libstream_out_standard_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libstream_out_standard_plugin.dll" SelfReg="false" NextFile="libstream_out_transcode_plugin.dll"/>
+    <ROW File="libstream_out_transcode_plugin.dll" Component_="libstream_out_transcode_plugin.dll" FileName="libst~17.dll|libstream_out_transcode_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libstream_out_transcode_plugin.dll" SelfReg="false" NextFile="libsubsdec_plugin.dll"/>
+    <ROW File="libsubsdec_plugin.dll" Component_="libsubsdec_plugin.dll" FileName="libsub~1.dll|libsubsdec_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libsubsdec_plugin.dll" SelfReg="false" NextFile="libsubsusf_plugin.dll"/>
+    <ROW File="libsubsusf_plugin.dll" Component_="libsubsusf_plugin.dll" FileName="libsub~2.dll|libsubsusf_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libsubsusf_plugin.dll" SelfReg="false" NextFile="libsubtitle_plugin.dll"/>
+    <ROW File="libsubtitle_plugin.dll" Component_="libsubtitle_plugin.dll" FileName="libsub~3.dll|libsubtitle_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libsubtitle_plugin.dll" SelfReg="false" NextFile="libsvcdsub_plugin.dll"/>
+    <ROW File="libsvcdsub_plugin.dll" Component_="libsvcdsub_plugin.dll" FileName="libsvc~1.dll|libsvcdsub_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libsvcdsub_plugin.dll" SelfReg="false" NextFile="libswscale_plugin.dll"/>
+    <ROW File="libswscale_plugin.dll" Component_="libswscale_plugin.dll" FileName="libsws~1.dll|libswscale_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libswscale_plugin.dll" SelfReg="false" NextFile="libt140_plugin.dll"/>
+    <ROW File="libt140_plugin.dll" Component_="libt140_plugin.dll" FileName="libt14~1.dll|libt140_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libt140_plugin.dll" SelfReg="false" NextFile="libtaglib_plugin.dll"/>
+    <ROW File="libtaglib_plugin.dll" Component_="libtaglib_plugin.dll" FileName="libtag~1.dll|libtaglib_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libtaglib_plugin.dll" SelfReg="false" NextFile="libtheora_plugin.dll"/>
+    <ROW File="libtheora_plugin.dll" Component_="libtheora_plugin.dll" FileName="libthe~1.dll|libtheora_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libtheora_plugin.dll" SelfReg="false" NextFile="libtransform_plugin.dll"/>
+    <ROW File="libtransform_plugin.dll" Component_="libtransform_plugin.dll" FileName="libtra~1.dll|libtransform_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libtransform_plugin.dll" SelfReg="false" NextFile="libtrivial_channel_mixer_plugin.dll"/>
+    <ROW File="libtrivial_channel_mixer_plugin.dll" Component_="libtrivial_channel_mixer_plugin.dll" FileName="libtri~1.dll|libtrivial_channel_mixer_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libtrivial_channel_mixer_plugin.dll" SelfReg="false" NextFile="libtrivial_mixer_plugin.dll"/>
+    <ROW File="libtrivial_mixer_plugin.dll" Component_="libtrivial_mixer_plugin.dll" FileName="libtri~2.dll|libtrivial_mixer_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libtrivial_mixer_plugin.dll" SelfReg="false" NextFile="libts_plugin.dll"/>
+    <ROW File="libts_plugin.dll" Component_="libts_plugin.dll" FileName="libts_~1.dll|libts_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libts_plugin.dll" SelfReg="false" NextFile="libtta_plugin.dll"/>
+    <ROW File="libtta_plugin.dll" Component_="libtta_plugin.dll" FileName="libtta~1.dll|libtta_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libtta_plugin.dll" SelfReg="false" NextFile="libtwolame_plugin.dll"/>
+    <ROW File="libtwolame_plugin.dll" Component_="libtwolame_plugin.dll" FileName="libtwo~1.dll|libtwolame_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libtwolame_plugin.dll" SelfReg="false" NextFile="libty_plugin.dll"/>
+    <ROW File="libty_plugin.dll" Component_="libty_plugin.dll" FileName="libty_~1.dll|libty_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libty_plugin.dll" SelfReg="false" NextFile="libugly_resampler_plugin.dll"/>
+    <ROW File="libugly_resampler_plugin.dll" Component_="libugly_resampler_plugin.dll" FileName="libugl~1.dll|libugly_resampler_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libugly_resampler_plugin.dll" SelfReg="false" NextFile="libvc1_plugin.dll"/>
+    <ROW File="libvc1_plugin.dll" Component_="libvc1_plugin.dll" FileName="libvc1~1.dll|libvc1_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libvc1_plugin.dll" SelfReg="false" NextFile="libvcd_plugin.dll"/>
+    <ROW File="libvcd_plugin.dll" Component_="libvcd_plugin.dll" FileName="libvcd~1.dll|libvcd_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libvcd_plugin.dll" SelfReg="false" NextFile="libvideo_filter_wrapper_plugin.dll"/>
+    <ROW File="libvideo_filter_wrapper_plugin.dll" Component_="libvideo_filter_wrapper_plugin.dll" FileName="libvid~1.dll|libvideo_filter_wrapper_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libvideo_filter_wrapper_plugin.dll" SelfReg="false" NextFile="libvisual_plugin.dll"/>
+    <ROW File="libvisual_plugin.dll" Component_="libvisual_plugin.dll" FileName="libvis~1.dll|libvisual_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libvisual_plugin.dll" SelfReg="false" NextFile="libvmem_plugin.dll"/>
+    <ROW File="libvlc.dll" Component_="libvlc.dll" FileName="libvlc.dll" Attributes="0" SourcePath="..\libs\vlc\libvlc.dll" SelfReg="false" NextFile="libvlccore.dll"/>
+    <ROW File="libvlccore.dll" Component_="libvlccore.dll" FileName="libvlc~1.dll|libvlccore.dll" Attributes="0" SourcePath="..\libs\vlc\libvlccore.dll" SelfReg="false" NextFile="liba52tofloat32_plugin.dll"/>
+    <ROW File="libvmem_plugin.dll" Component_="libvmem_plugin.dll" FileName="libvme~1.dll|libvmem_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libvmem_plugin.dll" SelfReg="false" NextFile="libvobsub_plugin.dll"/>
+    <ROW File="libvobsub_plugin.dll" Component_="libvobsub_plugin.dll" FileName="libvob~1.dll|libvobsub_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libvobsub_plugin.dll" SelfReg="false" NextFile="libvoc_plugin.dll"/>
+    <ROW File="libvoc_plugin.dll" Component_="libvoc_plugin.dll" FileName="libvoc~1.dll|libvoc_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libvoc_plugin.dll" SelfReg="false" NextFile="libvod_rtsp_plugin.dll"/>
+    <ROW File="libvod_rtsp_plugin.dll" Component_="libvod_rtsp_plugin.dll" FileName="libvod~1.dll|libvod_rtsp_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libvod_rtsp_plugin.dll" SelfReg="false" NextFile="libvorbis_plugin.dll"/>
+    <ROW File="libvorbis_plugin.dll" Component_="libvorbis_plugin.dll" FileName="libvor~1.dll|libvorbis_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libvorbis_plugin.dll" SelfReg="false" NextFile="libvout_sdl_plugin.dll"/>
+    <ROW File="libvout_sdl_plugin.dll" Component_="libvout_sdl_plugin.dll" FileName="libvou~1.dll|libvout_sdl_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libvout_sdl_plugin.dll" SelfReg="false" NextFile="libvout_wrapper_plugin.dll"/>
+    <ROW File="libvout_wrapper_plugin.dll" Component_="libvout_wrapper_plugin.dll" FileName="libvou~2.dll|libvout_wrapper_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libvout_wrapper_plugin.dll" SelfReg="false" NextFile="libwall_plugin.dll"/>
+    <ROW File="libwall_plugin.dll" Component_="libwall_plugin.dll" FileName="libwal~1.dll|libwall_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libwall_plugin.dll" SelfReg="false" NextFile="libwaveout_plugin.dll"/>
+    <ROW File="libwav_plugin.dll" Component_="libwav_plugin.dll" FileName="libwav~3.dll|libwav_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libwav_plugin.dll" SelfReg="false" NextFile="libwingdi_plugin.dll"/>
+    <ROW File="libwave_plugin.dll" Component_="libwave_plugin.dll" FileName="libwav~2.dll|libwave_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libwave_plugin.dll" SelfReg="false" NextFile="libwav_plugin.dll"/>
+    <ROW File="libwaveout_plugin.dll" Component_="libwaveout_plugin.dll" FileName="libwav~1.dll|libwaveout_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libwaveout_plugin.dll" SelfReg="false" NextFile="libwave_plugin.dll"/>
+    <ROW File="libwingdi_plugin.dll" Component_="libwingdi_plugin.dll" FileName="libwin~1.dll|libwingdi_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libwingdi_plugin.dll" SelfReg="false" NextFile="libx264_plugin.dll"/>
+    <ROW File="libx264_plugin.dll" Component_="libx264_plugin.dll" FileName="libx26~1.dll|libx264_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libx264_plugin.dll" SelfReg="false" NextFile="libxa_plugin.dll"/>
+    <ROW File="libxa_plugin.dll" Component_="libxa_plugin.dll" FileName="libxa_~1.dll|libxa_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libxa_plugin.dll" SelfReg="false" NextFile="libxml_plugin.dll"/>
+    <ROW File="libxml_plugin.dll" Component_="libxml_plugin.dll" FileName="libxml~1.dll|libxml_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libxml_plugin.dll" SelfReg="false" NextFile="libxtag_plugin.dll"/>
+    <ROW File="libxtag_plugin.dll" Component_="libxtag_plugin.dll" FileName="libxta~1.dll|libxtag_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libxtag_plugin.dll" SelfReg="false" NextFile="libyuvp_plugin.dll"/>
+    <ROW File="libyuv_plugin.dll" Component_="libyuv_plugin.dll" FileName="libyuv~2.dll|libyuv_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libyuv_plugin.dll" SelfReg="false" NextFile="libyuy2_i420_plugin.dll"/>
+    <ROW File="libyuvp_plugin.dll" Component_="libyuvp_plugin.dll" FileName="libyuv~1.dll|libyuvp_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libyuvp_plugin.dll" SelfReg="false" NextFile="libyuv_plugin.dll"/>
+    <ROW File="libyuy2_i420_plugin.dll" Component_="libyuy2_i420_plugin.dll" FileName="libyuy~1.dll|libyuy2_i420_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libyuy2_i420_plugin.dll" SelfReg="false" NextFile="libyuy2_i422_plugin.dll"/>
+    <ROW File="libyuy2_i422_plugin.dll" Component_="libyuy2_i422_plugin.dll" FileName="libyuy~2.dll|libyuy2_i422_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libyuy2_i422_plugin.dll" SelfReg="false" NextFile="libzip_plugin.dll"/>
+    <ROW File="libzip_plugin.dll" Component_="libzip_plugin.dll" FileName="libzip~1.dll|libzip_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libzip_plugin.dll" SelfReg="false" NextFile="libzvbi_plugin.dll"/>
+    <ROW File="libzvbi_plugin.dll" Component_="libzvbi_plugin.dll" FileName="libzvb~1.dll|libzvbi_plugin.dll" Attributes="0" SourcePath="..\libs\vlc\plugins\libzvbi_plugin.dll" SelfReg="false" NextFile="plugins_04041e_fe8.dat"/>
+    <ROW File="plugins_04041e_fe8.dat" Component_="plugins_04041e_fe8.dat" FileName="plugin~1.dat|plugins-04041e-fe8.dat" Attributes="0" SourcePath="..\libs\vlc\plugins\plugins-04041e-fe8.dat" SelfReg="false" NextFile="HtmlAgilityPack.dll"/>
+    <ROW File="settv.exe" Component_="settv.exe" FileName="settv.exe" Attributes="0" SourcePath="..\settv\bin\Release\settv.exe" SelfReg="false" NextFile="AxInterop.WMPLib.dll"/>
+    <ROW File="settv.exe.config" Component_="settv.vshost.exe.manifest" FileName="settve~1.con|settv.exe.config" Attributes="0" SourcePath="..\settv\bin\Release\settv.exe.config" SelfReg="false" NextFile="STVControls.dll"/>
+    <ROW File="settv.vshost.exe" Component_="settv.vshost.exe" FileName="settvv~1.exe|settv.vshost.exe" Attributes="0" SourcePath="..\settv\bin\Release\settv.vshost.exe" SelfReg="false" NextFile="settv.vshost.exe.config"/>
+    <ROW File="settv.vshost.exe.config" Component_="settv.vshost.exe.manifest" FileName="settvv~1.con|settv.vshost.exe.config" Attributes="0" SourcePath="..\settv\bin\Release\settv.vshost.exe.config" SelfReg="false" NextFile="settv.vshost.exe.manifest"/>
+    <ROW File="settv.vshost.exe.manifest" Component_="settv.vshost.exe.manifest" FileName="settvv~1.man|settv.vshost.exe.manifest" Attributes="0" SourcePath="..\settv\bin\Release\settv.vshost.exe.manifest" SelfReg="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
+    <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="0" PackageFolder="Setup Files" PackageFileName="setup" Languages="en_GB" InstallationType="2" CabsLocation="1" CompressCabs="false" UseLzma="true" PackageType="1" FilesInsideExe="true" ExtractionFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\install"/>
+    <ATTRIBUTE name="CurrentBuild" value="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
+    <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_en_GB.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_en.ail"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
+    <ROW Fragment="CommonUI.aip" Path="&lt;AI_FRAGS&gt;CommonUI.aip"/>
+    <ROW Fragment="FolderDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\FolderDlg.aip"/>
+    <ROW Fragment="SequenceDialogs.aip" Path="&lt;AI_THEMES&gt;classic\fragments\SequenceDialogs.aip"/>
+    <ROW Fragment="Sequences.aip" Path="&lt;AI_FRAGS&gt;Sequences.aip"/>
+    <ROW Fragment="StaticUIStrings.aip" Path="&lt;AI_FRAGS&gt;StaticUIStrings.aip"/>
+    <ROW Fragment="UI.aip" Path="&lt;AI_THEMES&gt;classic\fragments\UI.aip"/>
+    <ROW Fragment="Validation.aip" Path="&lt;AI_FRAGS&gt;Validation.aip"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiActionTextComponent">
+    <ROW Action="AI_DeleteLzma" Description="Deleting files extracted from archive" DescriptionLocId="ActionText.Description.AI_DeleteLzma" TemplateLocId="-"/>
+    <ROW Action="AI_DeleteRLzma" Description="Deleting files extracted from archive" DescriptionLocId="ActionText.Description.AI_DeleteLzma" TemplateLocId="-"/>
+    <ROW Action="AI_DownloadPrereq" Description="Downloading prerequisite software" Template="Downloading [1]{[2] completed}" DescriptionLocId="ActionText.Description.AI_DownloadPrereq" TemplateLocId="ActionText.Template.AI_DownloadPrereq"/>
+    <ROW Action="AI_ExtractLzma" Description="Extracting files from archive" DescriptionLocId="ActionText.Description.AI_ExtractLzma" TemplateLocId="-"/>
+    <ROW Action="AI_ExtractPrereq" Description="Extracting prerequisite software" Template="Extracting [1]{[2] completed}" DescriptionLocId="ActionText.Description.AI_ExtractPrereq" TemplateLocId="ActionText.Template.AI_ExtractPrereq"/>
+    <ROW Action="AI_InstallPostPrerequisite" Description="Installing prerequisite software" Template="Installing [1]{[2] completed}" DescriptionLocId="ActionText.Description.AI_InstallPrerequisite" TemplateLocId="ActionText.Template.AI_InstallPrerequisite"/>
+    <ROW Action="AI_InstallPrerequisite" Description="Installing prerequisite software" Template="Installing [1]{[2] completed}" DescriptionLocId="ActionText.Description.AI_InstallPrerequisite" TemplateLocId="ActionText.Template.AI_InstallPrerequisite"/>
+    <ROW Action="AI_VerifyPrereq" Description="Verifying prerequisites" Template="[1] was not installed correctly." DescriptionLocId="ActionText.Description.AI_VerifyPrereq" TemplateLocId="ActionText.Template.AI_VerifyPrereq"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiAppSearchComponent">
+    <ROW Property="AI_DOTNET40_SEARCH" Signature_="AI_DotNet40SearchSgn" Builds="DefaultBuild"/>
+    <ROW Property="AI_SETUPEXEPATH" Signature_="AI_EXE_PATH_CU" Builds="DefaultBuild"/>
+    <ROW Property="AI_SETUPEXEPATH" Signature_="AI_EXE_PATH_LM" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="Prereq.dll" SourcePath="&lt;AI_CUSTACTS&gt;Prereq.dll"/>
+    <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
+    <ROW Name="lzmaextractor.dll" SourcePath="&lt;AI_CUSTACTS&gt;lzmaextractor.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlComponent">
+    <ATTRIBUTE name="FixedSizeBitmaps" value="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlEventComponent">
+    <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="WelcomeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="WelcomeDlg" Control_="Next" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="FolderDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_INSTALL" Ordering="197"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceWelcomeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceWelcomeDlg" Control_="Next" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="99"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="ChangeButton" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="301"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="202"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_MAINT" Ordering="198"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="PatchWelcomeDlg" Condition="AI_PATCH" Ordering="203"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_PATCH" Ordering="201"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_PATCH" Ordering="199"/>
+    <ROW Dialog_="ResumeDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_RESUME" Ordering="299"/>
+    <ROW Dialog_="ExitDialog" Control_="Finish" Event="DoAction" Argument="AI_CleanPrereq" Condition="1" Ordering="301"/>
+    <ROW Dialog_="FatalError" Control_="Finish" Event="DoAction" Argument="AI_CleanPrereq" Condition="1" Ordering="102"/>
+    <ROW Dialog_="UserExit" Control_="Finish" Event="DoAction" Argument="AI_CleanPrereq" Condition="1" Ordering="101"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
+    <ROW Directory_="SHORTCUTDIR" Component_="SHORTCUTDIR"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_AppSearchEx" Type="1" Source="Prereq.dll" Target="DoAppSearchEx"/>
+    <ROW Action="AI_CleanPrereq" Type="65" Source="Prereq.dll" Target="CleanPrereq" WithoutSeq="true"/>
+    <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
+    <ROW Action="AI_DeleteCadLzma" Type="51" Source="AI_DeleteLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DeleteLzma" Type="1025" Source="lzmaextractor.dll" Target="DeleteLZMAFiles"/>
+    <ROW Action="AI_DeleteRCadLzma" Type="51" Source="AI_DeleteRLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DeleteRLzma" Type="1281" Source="lzmaextractor.dll" Target="DeleteLZMAFiles"/>
+    <ROW Action="AI_DownloadPrereq" Type="1" Source="Prereq.dll" Target="DownloadPrereq"/>
+    <ROW Action="AI_ExtractCadLzma" Type="51" Source="AI_ExtractLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_ExtractLzma" Type="1025" Source="lzmaextractor.dll" Target="ExtractLZMAFiles"/>
+    <ROW Action="AI_ExtractPrereq" Type="65" Source="Prereq.dll" Target="ExtractPrereq"/>
+    <ROW Action="AI_FindExeLzma" Type="1" Source="lzmaextractor.dll" Target="FindEXE"/>
+    <ROW Action="AI_InstallModeCheck" Type="1" Source="aicustact.dll" Target="UpdateInstallMode" WithoutSeq="true"/>
+    <ROW Action="AI_InstallPostPrerequisite" Type="1" Source="Prereq.dll" Target="InstallPostPrereq"/>
+    <ROW Action="AI_InstallPrerequisite" Type="65" Source="Prereq.dll" Target="InstallPrereq"/>
+    <ROW Action="AI_LaunchApp" Type="1" Source="aicustact.dll" Target="[#settv.exe]"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Type="65" Source="aicustact.dll" Target="PrepareUpgrade"/>
+    <ROW Action="AI_RESTORE_LOCATION" Type="65" Source="aicustact.dll" Target="RestoreLocation"/>
+    <ROW Action="AI_ResolveKnownFolders" Type="1" Source="aicustact.dll" Target="AI_ResolveKnownFolders"/>
+    <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
+    <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
+    <ROW Action="AI_VerifyPrereq" Type="1" Source="Prereq.dll" Target="VerifyPrereq"/>
+    <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]"/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
+    <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
+    <ROW Name="settv.exe" SourcePath="..\images\icon.ico" Index="0"/>
+    <ROW Name="settv_1.exe" SourcePath="..\images\logo.ico" Index="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_STORE_LOCATION" Condition="(Not Installed) OR REINSTALL" Sequence="1501"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Condition="AI_UPGRADE=&quot;No&quot; AND (Not Installed)" Sequence="1399"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="51"/>
+    <ROW Action="AI_DeleteCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="199" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteRCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="198" Builds="DefaultBuild"/>
+    <ROW Action="AI_ExtractCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="197" Builds="DefaultBuild"/>
+    <ROW Action="AI_FindExeLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="196" Builds="DefaultBuild"/>
+    <ROW Action="AI_ExtractLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="1549" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteRLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="1548" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="6599" Builds="DefaultBuild"/>
+    <ROW Action="AI_AppSearchEx" Sequence="101"/>
+    <ROW Action="AI_VerifyPrereq" Sequence="1201"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="51"/>
+    <ROW Action="AI_AppSearchEx" Sequence="101"/>
+    <ROW Action="AI_InstallPrerequisite" Sequence="1283"/>
+    <ROW Action="AI_InstallPostPrerequisite" Sequence="1301"/>
+    <ROW Action="AI_ExtractPrereq" Sequence="1282"/>
+    <ROW Action="AI_DownloadPrereq" Sequence="1281"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiLaunchConditionsComponent">
+    <ROW Condition="(AI_DOTNET40_SEARCH = &quot;#1&quot;)" Description="[ProductName] can not be installed on systems with .NET Framework version lower than [AI_MINDOTNETVERSION]" DescriptionLocId="AI.LaunchCondition.DotNET" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="VersionNT" Description="[ProductName] cannot be installed on [WindowsType9XDisplay]" DescriptionLocId="AI.LaunchCondition.No9X" IsPredefined="true" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegLocatorComponent">
+    <ROW Signature_="AI_DotNet40SearchSgn" Root="2" Key="SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full" Name="Install" Type="2"/>
+    <ROW Signature_="AI_EXE_PATH_CU" Root="1" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Type="2"/>
+    <ROW Signature_="AI_EXE_PATH_LM" Root="2" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Type="2"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegsComponent">
+    <ROW Registry="AF6A8838_0269_46AF_B128_A460BD2C6136" Root="-1" Key="Software\Caphyon\Advanced Installer\Prereqs\[ProductCode]\[ProductVersion]" Name="AF6A8838_0269_46AF_B128_A460BD2C6136" Value="1" Component_="AF6A8838_0269_46AF_B128_A460BD2C6136"/>
+    <ROW Registry="AI_ExePath" Root="-1" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Value="[AI_SETUPEXEPATH]" Component_="AI_ExePath"/>
+    <ROW Registry="Path" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Path" Value="[APPDIR]" Component_="ProductInformation"/>
+    <ROW Registry="ProductName_" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="+" Component_="ProductInformation"/>
+    <ROW Registry="Version" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
+    <ROW Shortcut="settv.exe" Directory_="SHORTCUTDIR" Name="Satell~2.exe|Satellite Live.exe" Component_="settv.exe" Target="[#settv.exe]" Description="settv.exe" Hotkey="0" Icon_="settv_1.exe" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="settv.exe_1" Directory_="DesktopFolder" Name="Satell~2.exe|Satellite Live.exe" Component_="settv.exe" Target="[#settv.exe]" Description="settv.exe" Hotkey="0" Icon_="settv_1.exe" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
+    <ATTRIBUTE name="UsedTheme" value="classic"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMax="[|ProductVersion]" Attributes="1025" ActionProperty="OLDPRODUCTS"/>
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.PreReqComponent">
+    <ROW PrereqKey="AF6A8838_0269_46AF_B128_A460BD2C6136" DisplayName="Adobe Flash Player 10" VersionMin="10.0" SetupFileUrl="http://fpdownload.macromedia.com/get/flashplayer/current/licensing/win/install_flash_player_10.exe" Location="1" ExactSize="0" Win9xVersions="Windows 9x/ME" WinNTVersions="Windows NT 4.0, Windows NT 4.0 Service Pack 1, Windows NT 4.0 Service Pack 2, Windows NT 4.0 Service Pack 3, Windows NT 4.0 Service Pack 4, Windows NT 4.0 Service Pack 5, Windows NT 4.0 Service Pack 6, Windows 2000, Windows 2000 Service Pack 1, Windows 2000 Service Pack 2, Windows 2000 Service Pack 3" Operator="0" Type="1" Feature="AF6A8838_0269_46AF_B128_A460BD2C6136"/>
+    <ROW PrereqKey="F4_28D6_4E08_8648_3469A5B0C76D" DisplayName=".NET Framework 3.5" VersionMin="3.5" SetupFileUrl="http://download.microsoft.com/download/7/0/3/703455ee-a747-4cc8-bd3e-98a615c3aedb/dotNetFx35setup.exe" Location="1" ExactSize="0" Win9xVersions="Windows 9x/ME" WinNTVersions="Windows NT 4.0, Windows NT 4.0 Service Pack 1, Windows NT 4.0 Service Pack 2, Windows NT 4.0 Service Pack 3, Windows NT 4.0 Service Pack 4, Windows NT 4.0 Service Pack 5, Windows NT 4.0 Service Pack 6, Windows 2000, Windows 2000 Service Pack 1, Windows 2000 Service Pack 2, Windows 2000 Service Pack 3, Windows 2000 Service Pack 4, Windows XP x86, Windows XP x86 Service Pack 1" Operator="1"/>
+    <ATTRIBUTE name="PrereqsOrder" value="AF6A8838_0269_46AF_B128_A460BD2C6136 F4_28D6_4E08_8648_3469A5B0C76D"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.PreReqSearchComponent">
+    <ROW SearchKey="AF6A8838_0269_46AF_B128_A460BD2C6136_ADOBE_FLASH_10_SEARCH" Prereq="AF6A8838_0269_46AF_B128_A460BD2C6136" SearchType="0" SearchString="[SystemFolder]Macromed\Flash\NPSWF32.dll" VerMin="10.0" Order="1" Property="AI_ADOBE_FLASH_10_PREREQSEARCH_PROP"/>
+    <ROW SearchKey="F4_28D6_4E08_8648_3469A5B0C76D_NET_35_SEARCH" Prereq="F4_28D6_4E08_8648_3469A5B0C76D" SearchType="9" SearchString="HKLM\SOFTWARE\Microsoft\NET Framework Setup\NDP\v3.5\Install" RefContent="M1" Order="1" Property="AI_NET_35_PREREQSEARCH_PROP"/>
+    <ROW SearchKey="F4_28D6_4E08_8648_3469A5B0C76D_NET_35_WIN_SEARCH" Prereq="F4_28D6_4E08_8648_3469A5B0C76D" SearchType="9" SearchString="HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\CurrentBuildNumber" RefContent="G6002" Order="2" Property="AI_NET_35_WIN_PREREQSEARCH_PROP"/>
+    <ROW SearchKey="F4_28D6_4E08_8648_3469A5B0C76D_NET_40_CP_SEARCH" Prereq="F4_28D6_4E08_8648_3469A5B0C76D" SearchType="9" SearchString="HKLM\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Client\Install" RefContent="M1" Order="3" Property="AI_NET_35_40_CP_PREREQSEARCH_PROP"/>
+    <ROW SearchKey="F4_28D6_4E08_8648_3469A5B0C76D_NET_40_SEARCH" Prereq="F4_28D6_4E08_8648_3469A5B0C76D" SearchType="9" SearchString="HKLM\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\Install" RefContent="M1" Order="4" Property="AI_NET_35_40_PREREQSEARCH_PROP"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.SynchronizedFolderComponent">
+    <ROW Directory_="APPDIR" SourcePath="..\settv\bin\Release" Feature="MainFeature" ExcludePattern="*~|#*#|%*%|._|CVS|.cvsignore|SCCS|vssver.scc|mssccprj.scc|vssver2.scc|.svn|.DS_Store" ExcludeFlags="6"/>
+  </COMPONENT>
+</DOCUMENT>

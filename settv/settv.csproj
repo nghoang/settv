@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7062D2B1-BAC5-422E-AEB2-E4C64A6D7F54}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>settv</RootNamespace>
+    <AssemblyName>settv</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrawlerLib.Net">
+      <HintPath>..\..\crawlerlibnet\bin\Debug\CrawlerLib.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.4.0.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\crawlerlibnet\bin\Debug\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppConst.cs" />
+    <Compile Include="Category.cs" />
+    <Compile Include="Channel.cs" />
+    <Compile Include="Country.cs" />
+    <Compile Include="FavoriteChannel.cs" />
+    <Compile Include="FlashingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FlashingForm.Designer.cs">
+      <DependentUpon>FlashingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IFlashing.cs" />
+    <Compile Include="IRegister.cs" />
+    <Compile Include="IServerRequest.cs" />
+    <Compile Include="ListBoxWithIcons.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainApp.Designer.cs">
+      <DependentUpon>MainApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.cs" />
+    <Compile Include="RegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterForm.Designer.cs">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServerRequest.cs" />
+    <Compile Include="WebclientX.cs" />
+    <Compile Include="YoutubeObject.cs" />
+    <EmbeddedResource Include="FlashingForm.resx">
+      <DependentUpon>FlashingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainApp.resx">
+      <DependentUpon>MainApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RegisterForm.resx">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxAXVLC">
+      <Guid>{DF2BBE39-40A8-433B-A279-073F48DA94B6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxShockwaveFlashObjects">
+      <Guid>{D27CDB6B-AE6D-11CF-96B8-444553540000}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AXVLC">
+      <Guid>{DF2BBE39-40A8-433B-A279-073F48DA94B6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="ShockwaveFlashObjects">
+      <Guid>{D27CDB6B-AE6D-11CF-96B8-444553540000}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\STVControls\STVControls.csproj">
+      <Project>{A827BF0C-547F-492D-A016-D181C52FFE85}</Project>
+      <Name>STVControls</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_bttn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet1.png" />
+    <None Include="Resources\bullet2.png" />
+    <None Include="Resources\bullet3.png" />
+    <None Include="Resources\bullet5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play_bttn_active.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_to_fav_bttn_active.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sliderbar_base.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\register_now_bttn.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
